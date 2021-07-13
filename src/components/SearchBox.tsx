@@ -6,7 +6,7 @@ const SearchBox = () => {
             <div className="flex flex-col divide-y divide-gray-200 lg:flex-row">
                 <div className="flex items-center py-2 lg:flex-col">
                     <div className="ml-4">CI</div>
-                    <input className="p-2 ml-4 text-lg font-bold text-gray-600 bg-gray-200" type="text" />
+                    <input className="p-2 ml-4 text-lg font-bold text-gray-600 bg-white" type="text" />
                 </div>
                 <div className="flex items-center py-2 divide-x">
                     <div className="flex items-center flex-1 ml-4">
