@@ -1,23 +1,24 @@
 import React from 'react'
+import {CalendarIcon, LocationMarkerIcon, UserIcon, SearchIcon} from '@heroicons/react/outline'
 
 const SearchBox = () => {
     return (
         <div className="flex flex-col px-4 pb-4 bg-white shadow-xl rounded-2xl md:max-w-sm">
             <div className="flex flex-col divide-y divide-gray-200 lg:flex-row">
-                <div className="flex items-center py-2 lg:flex-col">
-                    <div className="ml-4">CI</div>
+                <div className="flex items-center px-4 py-2 lg:flex-col">
+                    <CalendarIcon className="w-6 h-6 text-gray-600"></CalendarIcon>
                     <input className="p-2 ml-4 text-lg font-bold text-gray-600 bg-white" type="text" />
                 </div>
-                <div className="flex items-center py-2 divide-x">
-                    <div className="flex items-center flex-1 ml-4">
-                        <div>MI</div>
-                        <select className="w-full px-4 py-2 ml-4 text-lg font-bold text-gray-600 bg-white " >
+                <div className="flex items-center px-4 py-2 divide-x">
+                    <div className="flex items-center flex-1">
+                        <LocationMarkerIcon className="w-6 h-6 text-gray-600"></LocationMarkerIcon>
+                        <select className="flex-1 px-4 py-2 mr-4 text-lg font-bold text-gray-600 bg-white" >
                             <option value="大阪">大阪府</option>
                         </select>
                     </div>
-                    <div className="flex items-center ml-4 mr-2">
-                        <div className="ml-4">PI</div>
-                        <select id="person_num" name="person_num" className="w-full px-4 py-2 ml-4 text-lg font-bold text-gray-600 bg-white">
+                    <div className="flex items-center pl-4">
+                        <UserIcon className="w-6 h-6 text-gray-600"></UserIcon>
+                        <select id="person_num" name="person_num" className="flex-1 px-4 py-2 text-lg font-bold text-gray-600 bg-white">
                             <option value="1">1</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -31,7 +32,10 @@ const SearchBox = () => {
                     </div>
                 </div>
             </div>
-            <button className="px-4 py-4 text-lg font-bold text-white bg-hotel-green rounded-2xl">プランを検索</button>
+            <button className="flex items-center justify-center px-4 py-4 text-lg font-bold text-white bg-hotel-green rounded-2xl">
+                <SearchIcon className="w-6 h-6 text-white"></SearchIcon>
+                <span className="ml-6">プランを検索</span>
+                </button>
         </div>
     )
 }
