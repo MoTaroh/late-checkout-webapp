@@ -31,7 +31,7 @@ const SearchBox = () => {
                     </div>
                 </div>
             </div>
-            <button className="px-4 py-5 text-lg font-bold text-white bg-hotel-green rounded-2xl">プランを検索</button>
+            <button className="px-4 py-4 text-lg font-bold text-white bg-hotel-green rounded-2xl">プランを検索</button>
         </div>
     )
 }
