@@ -1,4 +1,5 @@
 import React, { useState }  from 'react'
+import { useHistory } from 'react-router-dom' 
 import {CalendarIcon, LocationMarkerIcon, UserIcon, SearchIcon} from '@heroicons/react/outline'
 import DatePicker, { registerLocale } from "react-datepicker"
 import "react-datepicker/dist/react-datepicker.css"
@@ -6,6 +7,11 @@ import ja from 'date-fns/locale/ja'
 registerLocale('ja', ja)
 
 const SearchBox = () => {
+    // プラン検索したら画面遷移
+    const history = useHistory();
+    const handleLink = (path: any) => history.push(path);
+
+    // datepicker
     const initialDate = new Date()
     const [startDate, setStartDate] = useState(initialDate)
     const handleChange = (date: any) => {
@@ -46,10 +52,10 @@ const SearchBox = () => {
                     </div>
                 </div>
             </div>
-            <button className="flex items-center justify-center px-4 py-4 text-lg font-bold text-white bg-hotel-green rounded-2xl">
+            <button onClick={() => handleLink('/hotels')} className="flex items-center justify-center px-4 py-4 text-lg font-bold text-white bg-hotel-green rounded-2xl">
                 <SearchIcon className="w-6 h-6 text-white"></SearchIcon>
                 <span className="ml-6">プランを検索</span>
-                </button>
+            </button>
         </div>
         // <div className="grid grid-cols-3 px-4 pb-4 bg-white divide-x divide-y divide-gray-200 shadow-xl rounded-2xl">
         //     <div className="flex items-center col-span-3 px-4 py-2">
