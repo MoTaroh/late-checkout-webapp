@@ -1,6 +1,6 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
-import NavBar from '../components/NavBar'
+import NavBar2 from '../components/NavBar2'
 import Footer from '../components/Footer'
 import HotelListItem from '../components/HotelListItem'
 
@@ -33,7 +33,7 @@ const HotelListPage = () => {
 
     return (
         <div className="bg-gray-100">
-            <NavBar></NavBar>
+            <NavBar2></NavBar2>
             <div className="container flex flex-col ">
                 <h2 className="mt-5 mb-6 text-lg font-bold text-gray-800">ホテル一覧</h2>
                 <div className="flex flex-col mb-6 space-y-3">
