@@ -17,9 +17,9 @@ const HotelListItem = (props: any) => {
     // クリックイベント
     return (
         <a href={url} rel="noopener noreferrer" target="_blank" className="flex items-center justify-between px-6 py-4 bg-white border border-gray-300 rounded-xl">
-            <div className="flex flex-col">
-                <h3 className="text-sm font-bold">{props.hotelInfo.hotelName}</h3>
-                <span className="mt-3 text-sm font-bold text-hotel-green">{stayDate}のプラン一覧</span>
+            <div className="flex flex-col flex-1 min-w-0">
+                <h3 className="text-sm font-bold truncate">{props.hotelInfo.hotelName}</h3>
+                <span className="mt-3 text-sm font-bold truncate text-hotel-green">{stayDate}のプラン一覧</span>
             </div>
             <ChevronRightIcon className="w-6 h-6 text-hotel-green"></ChevronRightIcon>
         </a>
