@@ -58,7 +58,7 @@ const SearchBox = () => {
                             id="stayCount"
                             value={stayCount}
                             onChange={handleStayCount}
-                            className="px-4 py-2 text-lg font-medium bg-white"
+                            className="px-4 py-2 text-lg font-medium bg-white appearance-none"
                         >
                             <option value="1">1</option>
                             <option value="2">2</option>
@@ -76,7 +76,7 @@ const SearchBox = () => {
                 <div className="flex items-center justify-between py-2 divide-x">
                     <div className="flex items-center flex-1 px-4">
                         <LocationMarkerIcon className="w-6 h-6 text-hotel-green"></LocationMarkerIcon>
-                        <select className="flex-1 px-4 py-2 text-lg font-medium bg-white" >
+                        <select className="flex-1 px-4 py-2 text-lg font-medium bg-white appearance-none" >
                             <option value="大阪">大阪府</option>
                         </select>
                     </div>
@@ -87,7 +87,7 @@ const SearchBox = () => {
                             name="person_num"
                             value={personNum}
                             onChange={handlePersonNum}
-                            className="flex-1 px-4 py-2 text-lg font-medium bg-white"
+                            className="flex-1 px-4 py-2 text-lg font-medium bg-white appearance-none"
                         >
                             <option value="1">1</option>
                             <option value="2">2</option>
