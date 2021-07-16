@@ -39,41 +39,46 @@ const SearchBox = () => {
         setPersonNum(event.target.value)
     }
     return (
-        <div className="flex flex-col px-4 pb-4 bg-white shadow-xl rounded-2xl md:max-w-sm ">
-            <div className="flex flex-col text-gray-500 divide-y divide-gray-200 lg:flex-row">
-                <div className="flex items-center px-4 py-2 divide-x lg:flex-col">
-                    <div className="flex items-center flex-1">
-                        <CalendarIcon className="w-6 h-6 text-hotel-green"></CalendarIcon>
-                        <DatePicker
-                            locale="ja"
-                            dateFormat="yyyy年MM月dd日"
-                            selected={stayDate}
-                            onChange={handleStayDate}
-                            className="w-full px-2 py-2 pl-4 text-lg font-medium bg-white">
-                        </DatePicker>
-                    </div>
-                    <div className="flex items-center">
-                        <select
-                            name="stayCount"
-                            id="stayCount"
-                            value={stayCount}
-                            onChange={handleStayCount}
-                            className="px-4 py-2 text-lg font-medium bg-white appearance-none"
-                        >
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                        </select>
-                        <div className="text-lg">泊</div>
+        <div className="flex flex-col px-4 pb-4 bg-white shadow-xl lg:pt-4 lg:flex-row rounded-2xl">
+            <div className="flex flex-col text-gray-500 divide-y divide-gray-200 lg:divide-x lg:flex-1 lg:divide-y-0 lg:justify-around lg:py-0 lg:flex-row">
+                <div className="flex flex-col">
+                    <label className="hidden text-xs font-bold lg:block text-hotel-green">
+                        宿泊希望日
+                    </label>
+                    <div className="flex items-center px-4 py-2 divide-x lg:mt-4 lg:px-0 lg:py-0">
+                        <div className="flex items-center flex-1">
+                            <CalendarIcon className="w-6 h-6 text-hotel-green"></CalendarIcon>
+                            <DatePicker
+                                locale="ja"
+                                dateFormat="yyyy年MM月dd日"
+                                selected={stayDate}
+                                onChange={handleStayDate}
+                                className="w-full px-2 py-2 pl-4 text-lg font-medium bg-white">
+                            </DatePicker>
+                        </div>
+                        <div className="flex items-center">
+                            <select
+                                name="stayCount"
+                                id="stayCount"
+                                value={stayCount}
+                                onChange={handleStayCount}
+                                className="px-4 py-2 text-lg font-medium bg-white appearance-none"
+                            >
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                            <div className="text-lg">泊</div>
+                        </div>
                     </div>
                 </div>
-                <div className="flex items-center justify-between py-2 divide-x">
+                <div className="flex items-center justify-between py-2 divide-x lg:py-0">
                     <div className="flex items-center flex-1 px-4">
                         <LocationMarkerIcon className="w-6 h-6 text-hotel-green"></LocationMarkerIcon>
                         <select className="flex-1 px-4 py-2 text-lg font-medium bg-white appearance-none" >
@@ -103,7 +108,7 @@ const SearchBox = () => {
                     </div>
                 </div>
             </div>
-            <button onClick={() => handleLink('/hotels')} className="flex items-center justify-center px-4 py-4 text-lg font-bold text-white bg-hotel-green rounded-2xl">
+            <button onClick={() => handleLink('/hotels')} className="flex items-center justify-center px-4 py-4 text-lg font-bold text-white lg:px-6 bg-hotel-green rounded-2xl">
                 <SearchIcon className="w-6 h-6 text-white"></SearchIcon>
                 <span className="ml-6">プランを検索</span>
             </button>
