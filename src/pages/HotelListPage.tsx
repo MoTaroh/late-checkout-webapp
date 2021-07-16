@@ -1,4 +1,5 @@
 import React from 'react'
+import { useLocation } from 'react-router-dom'
 import NavBar from '../components/NavBar'
 import Footer from '../components/Footer'
 import HotelListItem from '../components/HotelListItem'
@@ -16,13 +17,12 @@ const hotelList = [
     {"hotelName": "ホテルヒラリーズ心斎橋2","hotelNo": "314648"},
 ]
 
-const searchInfo = {
-    "date": "10月16日",   // TODO: datetimeを使用
-    "prefecture": "大阪府",
-    "personNum": 2
-}
-
 const HotelListPage = () => {
+    // 検索結果を受け取る
+    const location = useLocation();
+    const searchInfo = location.state
+    console.log(searchInfo);
+
     return (
         <div className="bg-gray-100">
             <NavBar></NavBar>
