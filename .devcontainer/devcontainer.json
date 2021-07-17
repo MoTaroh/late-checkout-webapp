@@ -29,6 +29,8 @@
         "lkytal.flatui",
         "pkief.material-icon-theme",
         "eamodio.gitlens",
+        "bradlc.vscode-tailwindcss",
+        "heybourn.headwind"
 	],
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
