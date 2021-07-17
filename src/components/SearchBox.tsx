@@ -42,7 +42,7 @@ const SearchBox = () => {
     return (
         <div className="flex flex-col px-4 pb-4 bg-white shadow-xl lg:pt-4 lg:flex-row rounded-2xl">
             <div className="flex flex-col text-gray-500 divide-y divide-gray-200 lg:mr-4 lg:divide-x lg:flex-1 lg:divide-y-0 lg:py-0 lg:flex-row">
-                <div className="flex flex-col lg:w-1/2">
+                <div className="flex flex-col lg:w-1/2 lg:ml-4">
                     <SearchLabel text="宿泊希望日"></SearchLabel>
                     <div className="flex items-center px-4 py-2 divide-x lg:divide-x-0 lg:mt-3 lg:px-0 lg:py-0">
                         <div className="flex items-center flex-1 lg:w-3/4">
