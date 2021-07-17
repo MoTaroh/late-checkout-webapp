@@ -33,18 +33,20 @@ const HotelListPage = () => {
 
     return (
         <div className="bg-gray-100">
-            <NavBar2></NavBar2>
-            <div className="container flex flex-col ">
-                <h2 className="mt-5 mb-6 text-lg font-bold text-gray-800">ホテル一覧</h2>
-                <div className="flex flex-col mb-6 space-y-3">
-                    {
-                        hotelList.map(hotelInfo => (
-                            <HotelListItem key={hotelInfo.hotelName} hotelInfo={hotelInfo} searchInfo={searchInfo}></HotelListItem>
-                        ))
-                    }
+            <div className="container">
+                <NavBar2></NavBar2>
+                <div className="flex flex-col ">
+                    <h2 className="mt-5 mb-6 text-lg font-bold text-gray-800">ホテル一覧</h2>
+                    <div className="flex flex-col mb-6 space-y-3">
+                        {
+                            hotelList.map(hotelInfo => (
+                                <HotelListItem key={hotelInfo.hotelName} hotelInfo={hotelInfo} searchInfo={searchInfo}></HotelListItem>
+                            ))
+                        }
+                    </div>
                 </div>
+                <Footer></Footer>
             </div>
-            <Footer></Footer>
         </div>
     )
 }
