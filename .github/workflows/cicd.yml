@@ -28,7 +28,7 @@ jobs:
       #     restore-keys: |
       #       ${{ runner.os }}-${{ env.project-name }}-
       - name: Package Install
-        run: npm run install
+        run: npm install
       - name: Lint
         run: npm run lint
       - name: Slack Notification by NonSuccess
