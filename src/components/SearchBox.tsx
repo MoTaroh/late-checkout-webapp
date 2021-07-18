@@ -52,7 +52,7 @@ const SearchBox = () => {
                                 dateFormat="yyyy年MM月dd日"
                                 selected={stayDate}
                                 onChange={handleStayDate}
-                                className="w-full px-2 py-2 pl-4 text-lg font-medium bg-white lg:font-bold">
+                                className="w-full px-2 py-2 pl-4 text-lg font-medium bg-white rounded-md cursor-pointer hover:bg-opacity-25 hover:bg-gray-300 lg:font-bold">
                             </DatePicker>
                         </div>
                         <div className="flex items-center lg:w-1/4">
@@ -61,17 +61,17 @@ const SearchBox = () => {
                                 id="stayCount"
                                 value={stayCount}
                                 onChange={handleStayCount}
-                                className="px-4 py-2 text-lg font-medium bg-white appearance-none lg:font-bold"
+                                className="px-4 py-2 text-lg font-medium bg-white rounded-md appearance-none cursor-pointer hover:bg-opacity-25 hover:bg-gray-300 lg:font-bold"
                             >
-                                <option value="1">1泊</option>
-                                <option value="2">2泊</option>
-                                <option value="3">3泊</option>
-                                <option value="4">4泊</option>
-                                <option value="5">5泊</option>
-                                <option value="6">6泊</option>
-                                <option value="7">7泊</option>
-                                <option value="8">8泊</option>
-                                <option value="9">9泊</option>
+                                <option value="1">1 泊</option>
+                                <option value="2">2 泊</option>
+                                <option value="3">3 泊</option>
+                                <option value="4">4 泊</option>
+                                <option value="5">5 泊</option>
+                                <option value="6">6 泊</option>
+                                <option value="7">7 泊</option>
+                                <option value="8">8 泊</option>
+                                <option value="9">9 泊</option>
                             </select>
                         </div>
                     </div>
@@ -81,7 +81,7 @@ const SearchBox = () => {
                         <SearchLabel text="都道府県"></SearchLabel>
                         <div className="flex items-center flex-1 px-4 lg:mt-3 lg:px-0">
                             <LocationMarkerIcon className="w-6 h-6 text-hotel-green"></LocationMarkerIcon>
-                            <select className="flex-1 px-4 py-2 text-lg font-medium bg-white appearance-none lg:font-bold" >
+                            <select className="flex-1 px-4 py-2 text-lg font-medium bg-white rounded-md appearance-none cursor-pointer hover:bg-opacity-25 hover:bg-gray-300 lg:font-bold" >
                                 <option value="大阪">大阪府</option>
                             </select>
                         </div>
@@ -95,17 +95,17 @@ const SearchBox = () => {
                                 name="person_num"
                                 value={personNum}
                                 onChange={handlePersonNum}
-                                className="flex-1 px-4 py-2 text-lg font-medium bg-white appearance-none lg:font-bold"
+                                className="flex-1 px-4 py-2 text-lg font-medium bg-white rounded-md appearance-none cursor-pointer hover:bg-opacity-25 hover:bg-gray-300 lg:font-bold"
                             >
-                                <option value="1">1名</option>
-                                <option value="2">2名</option>
-                                <option value="3">3名</option>
-                                <option value="4">4名</option>
-                                <option value="5">5名</option>
-                                <option value="6">6名</option>
-                                <option value="7">7名</option>
-                                <option value="8">8名</option>
-                                <option value="9">9名</option>
+                                <option value="1">1 名</option>
+                                <option value="2">2 名</option>
+                                <option value="3">3 名</option>
+                                <option value="4">4 名</option>
+                                <option value="5">5 名</option>
+                                <option value="6">6 名</option>
+                                <option value="7">7 名</option>
+                                <option value="8">8 名</option>
+                                <option value="9">9 名</option>
                             </select>
                         </div>
                     </div>
