@@ -10,7 +10,7 @@ const NavBar2 = () => {
         console.log(infoIsOpen)
     }
     return (
-        <div className="flex items-center justify-between h-16 px-4 py-4 text-gray-600">
+        <div className="flex items-center justify-between h-16 py-4 text-gray-600">
             <h1 className="text-2xl font-bold ">LOGO</h1>
             <button onClick={handleClick}>
                 <InformationCircleIcon className="w-6 h-6"></InformationCircleIcon>
