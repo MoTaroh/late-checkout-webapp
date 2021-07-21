@@ -2,7 +2,6 @@ import React, { useState }  from 'react'
 import { useHistory } from 'react-router-dom' 
 import {CalendarIcon, LocationMarkerIcon, UserIcon, SearchIcon} from '@heroicons/react/outline'
 import DatePicker, { registerLocale } from "react-datepicker"
-import "react-datepicker/dist/react-datepicker.css"
 import ja from 'date-fns/locale/ja'
 import SearchLabel from './SearchLabel'
 registerLocale('ja', ja)
@@ -52,7 +51,9 @@ const SearchBox = () => {
                                 dateFormat="yyyy年MM月dd日"
                                 selected={stayDate}
                                 onChange={handleStayDate}
-                                className="w-full px-2 py-2 pl-4 text-lg font-medium bg-white rounded-md cursor-pointer hover:bg-opacity-25 hover:bg-gray-300 lg:font-bold">
+                                nextMonthButtonLabel=">"
+                                previousMonthButtonLabel="<"
+                                className="relative w-full px-2 py-2 pl-4 text-lg font-medium bg-white rounded-md cursor-pointer hover:bg-opacity-25 hover:bg-gray-300 lg:font-bold">
                             </DatePicker>
                         </div>
                         <div className="flex items-center lg:w-1/4">
@@ -111,7 +112,7 @@ const SearchBox = () => {
                     </div>
                 </div>
             </div>
-            <button onClick={() => handleLink('/hotels')} className="flex items-center justify-center px-4 py-4 text-lg font-bold text-white lg:px-6 bg-hotel-green rounded-2xl">
+            <button onClick={() => handleLink('/hotels')} className="flex items-center justify-center px-4 py-4 text-lg font-bold text-white lg:px-6 bg-hotel-green hover:bg-hotel-green-darker rounded-2xl">
                 <SearchIcon className="w-6 h-6 text-white"></SearchIcon>
                 <span className="ml-6">プランを検索</span>
             </button>

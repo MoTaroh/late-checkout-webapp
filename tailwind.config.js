@@ -7,32 +7,21 @@ module.exports = {
     colors: {
         transparent: 'transparent',
         current: 'currentColor',
+        black: colors.black,
+        white: colors.white,
         gray: colors.blueGray,
-        white: colors.white
+        red: colors.red,
+        yellow: colors.amber,
+        green: colors.emerald,
+        blue: colors.blue,
+        indigo: colors.indigo,
+        purple: colors.violet,
+        pink: colors.pink,
     },
-    inset: (theme, { negative }) => ({
-        auto: 'auto',
-        ...theme('spacing'),
-        ...negative(theme('spacing')),
-        '1/2': '50%',
-        '1/3': '33.333333%',
-        '2/3': '66.666667%',
-        '1/8': '12.5%',
-        '1/4': '25%',
-        '2/4': '50%',
-        '3/4': '75%',
-        full: '100%',
-        '-1/2': '-50%',
-        '-1/3': '-33.333333%',
-        '-2/3': '-66.666667%',
-        '-1/4': '-25%',
-        '-2/4': '-50%',
-        '-3/4': '-75%',
-        '-full': '-100%',
-      }),
     extend: {
         colors: {
-            "hotel-green": "#5F98A3",
+            "hotel-green": "#56919C",
+            "hotel-green-darker": "#35707B"
         },
         backgroundImage: theme => ({
             "hero-image": "url('./images/hero_bg.jpg')",
@@ -51,5 +40,9 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/forms")({
+      strategy: 'class',
+    }),
+  ],
 }
