@@ -7,8 +7,16 @@ module.exports = {
     colors: {
         transparent: 'transparent',
         current: 'currentColor',
+        black: colors.black,
+        white: colors.white,
         gray: colors.blueGray,
-        white: colors.white
+        red: colors.red,
+        yellow: colors.amber,
+        green: colors.emerald,
+        blue: colors.blue,
+        indigo: colors.indigo,
+        purple: colors.violet,
+        pink: colors.pink,
     },
     extend: {
         colors: {
@@ -32,5 +40,9 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/forms")({
+      strategy: 'class',
+    }),
+  ],
 }
