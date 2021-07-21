@@ -111,7 +111,7 @@ const SearchBox = () => {
                     </div>
                 </div>
             </div>
-            <button onClick={() => handleLink('/hotels')} className="flex items-center justify-center px-4 py-4 text-lg font-bold text-white lg:px-6 bg-hotel-green rounded-2xl">
+            <button onClick={() => handleLink('/hotels')} className="flex items-center justify-center px-4 py-4 text-lg font-bold text-white lg:px-6 bg-hotel-green hover:bg-hotel-green-darker rounded-2xl">
                 <SearchIcon className="w-6 h-6 text-white"></SearchIcon>
                 <span className="ml-6">プランを検索</span>
             </button>
