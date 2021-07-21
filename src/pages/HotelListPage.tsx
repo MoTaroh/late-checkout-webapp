@@ -37,7 +37,7 @@ const HotelListPage = () => {
                 <NavBar2></NavBar2>
                 <div className="flex flex-col flex-1">
                     <h2 className="mt-5 mb-6 text-lg font-bold text-gray-800">ホテル一覧</h2>
-                    <div className="grid gap-3 mb-6 md:grid-cols-2 lg:grid-cols-3">
+                    <div className="grid grid-cols-1 gap-3 mb-6 md:grid-cols-2 lg:grid-cols-3">
                         {
                             hotelList.map(hotelInfo => (
                                 <HotelListItem key={hotelInfo.hotelName} hotelInfo={hotelInfo} searchInfo={searchInfo}></HotelListItem>
