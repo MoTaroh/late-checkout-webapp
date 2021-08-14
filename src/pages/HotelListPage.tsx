@@ -85,23 +85,32 @@ const HotelListPage = () => {
         <div className="min-h-screen bg-gray-100">
             <div className="container flex flex-col">
                 <NavBar2></NavBar2>
-                <div className="flex flex-col flex-1 mt-5">
-                    <div className="flex items-start justify-between">
-                        <h2 className="text-lg font-bold text-gray-800 ">ホテル一覧</h2>
-                        <SelectList regions={regions}></SelectList>
-                    </div>
-                    <div className="flex items-center justify-between mt-3 space-x-9">
-                        <div className="text-sm text-gray-800 lg:text-base lg:font-bold">{hotelDB.result[0].regName}</div>
-                        <div className="flex-1 h-px bg-hotel-green"></div>
-                    </div>
-                    <div className="mt-3">
-                        <div className="grid grid-cols-1 gap-3 mb-6 md:grid-cols-2 lg:grid-cols-3">
-                            {
-                                hotelList.map(hotelInfo => (
-                                    <HotelListItem key={hotelInfo.hotelName} hotelInfo={hotelInfo} searchInfo={searchInfo}></HotelListItem>
-                                ))
-                            }
+                <div className="grid gap-5 lg:grid-cols-3">
+                    <div className="flex flex-col flex-1 mt-5 lg:col-span-2">
+                        <div className="flex items-start justify-between">
+                            <h2 className="text-lg font-bold text-gray-800 ">ホテル一覧</h2>
+                            <SelectList regions={regions}></SelectList>
                         </div>
+                        <div className="flex items-center justify-between mt-3 space-x-9">
+                            <div className="text-sm text-gray-800 lg:text-base lg:font-bold">{hotelDB.result[0].regName}</div>
+                            <div className="flex-1 h-px bg-hotel-green"></div>
+                        </div>
+                        <div className="mt-3">
+                            <div className="grid grid-cols-1 gap-3 mb-6">
+                                {
+                                    hotelList.map(hotelInfo => (
+                                        <HotelListItem key={hotelInfo.hotelName} hotelInfo={hotelInfo} searchInfo={searchInfo}></HotelListItem>
+                                    ))
+                                }
+                            </div>
+                        </div>
+                    </div>
+                    <div className="hidden mt-5 lg:block">
+                        <h2 className="text-lg font-bold text-gray-800 ">人気のホテル</h2>
+                        <div className="flex items-center justify-center h-64 p-3 mt-3 bg-white border border-gray-300 rounded-xl">
+                            <h3 className="font-bold truncate">只今準備中です。</h3>
+                        </div>
+                        <div className="flex items-center justify-center h-64 p-3 mt-6 font-bold bg-opacity-25 border border-gray-300 bg-hotel-green rounded-xl">ここに広告を入れたいです。</div>
                     </div>
                 </div>
                 <Footer></Footer>
