@@ -40,11 +40,41 @@ const hotelDB = {
             "planList": [
                 {
                     "planNo": "",
-                    "planName": "",
+                    "planName": "【室数限定36時間ステイ】8：00～翌20：00の36時間滞在可能！　■アパは映画もアニメも見放題■",
+                    "checkInTime": "15:00",
+                    "checkOutTime": "20:00",
                     "roomList": [
                         {
                             "roomNo": "",
-                            "roomName": "",
+                            "roomName": "スタンダードルーム 2名利用 【禁煙室】",
+                            "roomPrice": 4000
+                        },
+                        {
+                            "roomNo": "",
+                            "roomName": "スタンダードルーム 2名利用 【喫煙室】",
+                            "roomPrice": 4200
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hotelNo": "345754",
+            "hotelName": "アインズ・イン梅田東",
+            "prefNo": "270000",
+            "prefName": "大阪府",
+            "regionNo": "272000",
+            "regionName": "大阪駅・梅田駅・福島・淀屋橋・本町",
+            "planList": [
+                {
+                    "planNo": "",
+                    "planName": "【室数限定36時間ステイ】8：00～翌20：00の36時間滞在可能！　■アパは映画もアニメも見放題■",
+                    "checkInTime": "15:00",
+                    "checkOutTime": "20:00",
+                    "roomList": [
+                        {
+                            "roomNo": "",
+                            "roomName": "スタンダードルーム 2名利用 【禁煙室】",
                             "roomPrice": 4000
                         }
                     ]
@@ -61,11 +91,13 @@ const hotelDB = {
             "planList": [
                 {
                     "planNo": "",
-                    "planName": "",
+                    "planName": "【室数限定36時間ステイ】8：00～翌20：00の36時間滞在可能！　■アパは映画もアニメも見放題■",
+                    "checkInTime": "15:00",
+                    "checkOutTime": "20:00",
                     "roomList": [
                         {
                             "roomNo": "",
-                            "roomName": "",
+                            "roomName": "スタンダードルーム 2名利用 【禁煙室】",
                             "roomPrice": 4000
                         }
                     ]
@@ -82,11 +114,13 @@ const hotelDB = {
             "planList": [
                 {
                     "planNo": "",
-                    "planName": "",
+                    "planName": "【室数限定36時間ステイ】8：00～翌20：00の36時間滞在可能！　■アパは映画もアニメも見放題■",
+                    "checkInTime": "15:00",
+                    "checkOutTime": "20:00",
                     "roomList": [
                         {
                             "roomNo": "",
-                            "roomName": "",
+                            "roomName": "スタンダードルーム 2名利用 【禁煙室】",
                             "roomPrice": 4000
                         }
                     ]
@@ -103,11 +137,13 @@ const hotelDB = {
             "planList": [
                 {
                     "planNo": "",
-                    "planName": "",
+                    "planName": "【室数限定36時間ステイ】8：00～翌20：00の36時間滞在可能！　■アパは映画もアニメも見放題■",
+                    "checkInTime": "15:00",
+                    "checkOutTime": "20:00",
                     "roomList": [
                         {
                             "roomNo": "",
-                            "roomName": "",
+                            "roomName": "スタンダードルーム 2名利用 【禁煙室】",
                             "roomPrice": 4000
                         }
                     ]
@@ -124,11 +160,13 @@ const hotelDB = {
             "planList": [
                 {
                     "planNo": "",
-                    "planName": "",
+                    "planName": "【室数限定36時間ステイ】8：00～翌20：00の36時間滞在可能！　■アパは映画もアニメも見放題■",
+                    "checkInTime": "15:00",
+                    "checkOutTime": "20:00",
                     "roomList": [
                         {
                             "roomNo": "",
-                            "roomName": "",
+                            "roomName": "スタンダードルーム 2名利用 【禁煙室】",
                             "roomPrice": 4000
                         }
                     ]
@@ -145,32 +183,13 @@ const hotelDB = {
             "planList": [
                 {
                     "planNo": "",
-                    "planName": "",
+                    "planName": "【室数限定36時間ステイ】8：00～翌20：00の36時間滞在可能！　■アパは映画もアニメも見放題■",
+                    "checkInTime": "15:00",
+                    "checkOutTime": "20:00",
                     "roomList": [
                         {
                             "roomNo": "",
-                            "roomName": "",
-                            "roomPrice": 4000
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "hotelNo": "345754",
-            "hotelName": "アインズ・イン梅田東",
-            "prefNo": "270000",
-            "prefName": "大阪府",
-            "regionNo": "272000",
-            "regionName": "大阪駅・梅田駅・福島・淀屋橋・本町",
-            "planList": [
-                {
-                    "planNo": "",
-                    "planName": "",
-                    "roomList": [
-                        {
-                            "roomNo": "",
-                            "roomName": "",
+                            "roomName": "スタンダードルーム 2名利用 【禁煙室】",
                             "roomPrice": 4000
                         }
                     ]
@@ -187,11 +206,13 @@ const hotelDB = {
             "planList": [
                 {
                     "planNo": "",
-                    "planName": "",
+                    "planName": "【室数限定36時間ステイ】8：00～翌20：00の36時間滞在可能！　■アパは映画もアニメも見放題■",
+                    "checkInTime": "15:00",
+                    "checkOutTime": "20:00",
                     "roomList": [
                         {
                             "roomNo": "",
-                            "roomName": "",
+                            "roomName": "スタンダードルーム 2名利用 【禁煙室】",
                             "roomPrice": 4000
                         }
                     ]
@@ -208,11 +229,13 @@ const hotelDB = {
             "planList": [
                 {
                     "planNo": "",
-                    "planName": "",
+                    "planName": "【室数限定36時間ステイ】8：00～翌20：00の36時間滞在可能！　■アパは映画もアニメも見放題■",
+                    "checkInTime": "15:00",
+                    "checkOutTime": "20:00",
                     "roomList": [
                         {
                             "roomNo": "",
-                            "roomName": "",
+                            "roomName": "スタンダードルーム 2名利用 【禁煙室】",
                             "roomPrice": 4000
                         }
                     ]
@@ -229,11 +252,13 @@ const hotelDB = {
             "planList": [
                 {
                     "planNo": "",
-                    "planName": "",
+                    "planName": "【室数限定36時間ステイ】8：00～翌20：00の36時間滞在可能！　■アパは映画もアニメも見放題■",
+                    "checkInTime": "15:00",
+                    "checkOutTime": "20:00",
                     "roomList": [
                         {
                             "roomNo": "",
-                            "roomName": "",
+                            "roomName": "スタンダードルーム 2名利用 【禁煙室】",
                             "roomPrice": 4000
                         }
                     ]
@@ -250,11 +275,13 @@ const hotelDB = {
             "planList": [
                 {
                     "planNo": "",
-                    "planName": "",
+                    "planName": "【室数限定36時間ステイ】8：00～翌20：00の36時間滞在可能！　■アパは映画もアニメも見放題■",
+                    "checkInTime": "15:00",
+                    "checkOutTime": "20:00",
                     "roomList": [
                         {
                             "roomNo": "",
-                            "roomName": "",
+                            "roomName": "スタンダードルーム 2名利用 【禁煙室】",
                             "roomPrice": 4000
                         }
                     ]

@@ -22,9 +22,9 @@ const HotelList = (props: any) => {
         // ホテル情報をセット
         rows.push(
             <HotelListItem 
-                hotelInfo={hotel}
+                hotel={hotel}
                 searchInfo={props.searchInfo}
-                key={hotel.hotelId}
+                key={hotel.hotelNo}
             />
         );
         lastRegion = hotel.regionName;
