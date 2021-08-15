@@ -4,7 +4,7 @@ import {ChevronRightIcon, HeartIcon} from '@heroicons/react/outline'
 
 const HotelListItem = (props: any) => {
     // 宿泊日
-    const stayDate = props.searchInfo.stayYear + "年" + props.searchInfo.stayMonth + "月"+ props.searchInfo.stayDay + "日";
+    // const stayDate = props.searchInfo.stayYear + "年" + props.searchInfo.stayMonth + "月"+ props.searchInfo.stayDay + "日";
     // URL
     const url = `https://www.jalan.net/yad${props.hotelInfo.hotelNo}/plan/?screenId=UWW3101&yadNo=${props.hotelInfo.hotelNo}&reSearchFlg=1&roomCrack=200000&smlCd=272005&distCd=01&stayYear=${props.searchInfo.stayYear}&stayMonth=${props.searchInfo.stayMonth}&stayDay=${props.searchInfo.stayDay}&stayCount=${props.searchInfo.stayCount}&roomCount=1&adultNum=${props.searchInfo.personNum}&minPrice=0&maxPrice=999999`
     // クリックイベント
