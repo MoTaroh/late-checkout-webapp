@@ -301,9 +301,9 @@ const HotelListPage = () => {
 
     return (
         <div className="min-h-screen bg-gray-100">
-            <div className="container flex flex-col">
-                <NavBar2></NavBar2>
-                <div className="grid gap-6 lg:grid-cols-3">
+            <NavBar2></NavBar2>
+            <div className="container flex flex-col mt-16 md:mt-20">
+                <div className="grid gap-6 mt-6 md:mt-8 lg:mt-10 lg:grid-cols-3">
                         {/* <div className="flex items-start justify-between">
                             <h2 className="text-lg font-bold text-gray-800 ">ホテル一覧</h2>
                             <SelectList regions={regions}></SelectList>
