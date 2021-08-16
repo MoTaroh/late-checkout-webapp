@@ -4,6 +4,9 @@ import {CalendarIcon, LocationMarkerIcon, UserIcon, SearchIcon} from '@heroicons
 import DatePicker, { registerLocale } from "react-datepicker"
 import ja from 'date-fns/locale/ja'
 import SearchLabel from './SearchLabel'
+import StayDateInput from './SearchBox/StayDateInput'
+import StayPrefectureInput from './SearchBox/StayPrefectureInput'
+import StayPersonNumInput from './SearchBox/StayPersonNumInput'
 registerLocale('ja', ja)
 
 const SearchBox = () => {
@@ -43,72 +46,16 @@ const SearchBox = () => {
             <div className="flex flex-col text-gray-500 divide-y divide-gray-200 lg:mr-4 lg:divide-x lg:flex-1 lg:divide-y-0 lg:py-0 lg:flex-row">
                 <div className="flex flex-col lg:w-1/2 lg:ml-4">
                     <SearchLabel text="宿泊希望日"></SearchLabel>
-                    <div className="flex items-center px-4 py-2 divide-x lg:divide-x-0 lg:mt-3 lg:px-0 lg:py-0">
-                        <div className="flex items-center flex-1 lg:w-3/4">
-                            <CalendarIcon className="w-6 h-6 text-hotel-green"></CalendarIcon>
-                            <DatePicker
-                                locale="ja"
-                                dateFormat="yyyy年MM月dd日"
-                                selected={stayDate}
-                                onChange={handleStayDate}
-                                nextMonthButtonLabel=">"
-                                previousMonthButtonLabel="<"
-                                className="relative w-full px-2 py-2 pl-4 text-lg font-medium bg-white rounded-md cursor-pointer hover:bg-opacity-25 hover:bg-gray-300 lg:font-bold">
-                            </DatePicker>
-                        </div>
-                        <div className="flex items-center lg:w-1/4">
-                            <select
-                                name="stayCount"
-                                id="stayCount"
-                                value={stayCount}
-                                onChange={handleStayCount}
-                                className="px-4 py-2 text-lg font-medium bg-white rounded-md appearance-none cursor-pointer hover:bg-opacity-25 hover:bg-gray-300 lg:font-bold"
-                            >
-                                <option value="1">1 泊</option>
-                                <option value="2">2 泊</option>
-                                <option value="3">3 泊</option>
-                                <option value="4">4 泊</option>
-                                <option value="5">5 泊</option>
-                                <option value="6">6 泊</option>
-                                <option value="7">7 泊</option>
-                                <option value="8">8 泊</option>
-                                <option value="9">9 泊</option>
-                            </select>
-                        </div>
-                    </div>
+                    <StayDateInput></StayDateInput>
                 </div>
                 <div className="flex items-center justify-between py-2 divide-x lg:py-0 lg:w-1/2">
                     <div className="flex flex-col lg:w-1/2 lg:ml-4">
                         <SearchLabel text="都道府県"></SearchLabel>
-                        <div className="flex items-center flex-1 px-4 lg:mt-3 lg:px-0">
-                            <LocationMarkerIcon className="w-6 h-6 text-hotel-green"></LocationMarkerIcon>
-                            <select className="flex-1 px-4 py-2 text-lg font-medium bg-white rounded-md appearance-none cursor-pointer hover:bg-opacity-25 hover:bg-gray-300 lg:font-bold" >
-                                <option value="大阪">大阪府</option>
-                            </select>
-                        </div>
+                        <StayPrefectureInput></StayPrefectureInput>
                     </div>
                     <div className="flex flex-col lg:w-1/2 lg:pl-4">
                         <SearchLabel text="宿泊人数"></SearchLabel>
-                        <div className="flex items-center px-4 lg:px-0 lg:mt-3">
-                            <UserIcon className="w-6 h-6 text-hotel-green"></UserIcon>
-                            <select
-                                id="person_num"
-                                name="person_num"
-                                value={personNum}
-                                onChange={handlePersonNum}
-                                className="flex-1 px-4 py-2 text-lg font-medium bg-white rounded-md appearance-none cursor-pointer hover:bg-opacity-25 hover:bg-gray-300 lg:font-bold"
-                            >
-                                <option value="1">1 名</option>
-                                <option value="2">2 名</option>
-                                <option value="3">3 名</option>
-                                <option value="4">4 名</option>
-                                <option value="5">5 名</option>
-                                <option value="6">6 名</option>
-                                <option value="7">7 名</option>
-                                <option value="8">8 名</option>
-                                <option value="9">9 名</option>
-                            </select>
-                        </div>
+                        <StayPersonNumInput></StayPersonNumInput>
                     </div>
                 </div>
             </div>
