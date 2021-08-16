@@ -1,11 +1,11 @@
-import React from 'react'
-import { useLocation } from 'react-router-dom'
+import { useContext } from 'react'
 import NavBar2 from '../components/NavBar/NavBar2'
 import Footer from '../components/Footer'
 // import HotelListItem from '../components/HotelListItem'
 // import SelectList from '../components/SelectList'
 // import RegionName from '../components/RegionName'
 import HotelList from '../components/HotelList'
+import { SearchContext } from '../App'
 
 // const hotelList = [
 //     {"hotelName": "アインズ・イン梅田東","hotelNo": "345754"},
@@ -294,9 +294,17 @@ const hotelDB = {
 // const regions = ["大阪駅・梅田駅・福島・淀屋橋・本町", "心斎橋・なんば・四ツ橋"]
 
 const HotelListPage = () => {
-    // 検索結果を受け取る
-    const location = useLocation();
-    const searchInfo = location.state
+    // stateから検索情報を取り出す
+    const {stayDate, stayCount, personNum} = useContext(SearchContext)
+    const searchInfo = {
+        "stayYear" : stayDate.getFullYear(),
+        "stayMonth" : stayDate.getMonth() + 1,
+        "stayDay" : stayDate.getDate(),
+        "dayofweek" : stayDate.getDay(),
+        "stayCount" : stayCount,
+        "prefecture": "大阪府",
+        "personNum": personNum
+    }
     console.log(searchInfo);
 
     return (

@@ -1,7 +1,6 @@
-import React, { useState }  from 'react'
 import { useHistory } from 'react-router-dom' 
-import {CalendarIcon, LocationMarkerIcon, UserIcon, SearchIcon} from '@heroicons/react/outline'
-import DatePicker, { registerLocale } from "react-datepicker"
+import {SearchIcon} from '@heroicons/react/outline'
+import { registerLocale } from "react-datepicker"
 import ja from 'date-fns/locale/ja'
 import SearchLabel from './SearchLabel'
 import StayDateInput from './SearchBox/StayDateInput'
@@ -13,34 +12,9 @@ const SearchBox = () => {
     // プラン検索したら画面遷移
     const history = useHistory();
     const handleLink = (path: any) => {
-        const searchInfo = {
-            "stayYear" : stayDate.getFullYear(),
-            "stayMonth" : stayDate.getMonth() + 1,
-            "stayDay" : stayDate.getDate(),
-            "dayofweek" : stayDate.getDay(),
-            "stayCount" : stayCount,
-            "prefecture": "大阪府",
-            "personNum": personNum
-        }
-        history.push(path, searchInfo);
+        history.push(path);
     }
 
-    // datepicker
-    const initialDate = new Date()
-    const [stayDate, setStayDate] = useState(initialDate)
-    const handleStayDate = (date: Date) => {
-        setStayDate(date)
-    }
-    // 宿泊日数選択
-    const [stayCount, setStayCount] = useState(1)
-    const handleStayCount = (event: any) => {
-        setStayCount(event.target.value);
-    }
-    // 宿泊人数（大人のみ）
-    const [personNum, setPersonNum] = useState(2)
-    const handlePersonNum = (event: any) => {
-        setPersonNum(event.target.value)
-    }
     return (
         <div className="flex flex-col w-full max-w-sm px-4 pb-4 bg-white shadow-xl lg:pt-4 lg:max-w-none lg:flex-row rounded-2xl">
             <div className="flex flex-col text-gray-500 divide-y divide-gray-200 lg:mr-4 lg:divide-x lg:flex-1 lg:divide-y-0 lg:py-0 lg:flex-row">
