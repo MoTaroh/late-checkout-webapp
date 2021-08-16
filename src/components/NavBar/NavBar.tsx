@@ -1,5 +1,5 @@
 import React from 'react'
-import InfoPopover from './InfoPopover'
+import InfoPopover from '../InfoPopover'
 
 const NavBar = () => {
     return (

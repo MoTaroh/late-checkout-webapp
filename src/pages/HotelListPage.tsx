@@ -1,6 +1,6 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
-import NavBar2 from '../components/NavBar2'
+import NavBar2 from '../components/NavBar/NavBar2'
 import Footer from '../components/Footer'
 // import HotelListItem from '../components/HotelListItem'
 // import SelectList from '../components/SelectList'
