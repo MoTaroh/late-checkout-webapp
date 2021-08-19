@@ -8,7 +8,7 @@ registerLocale('ja', ja)
 const StayDateInput = () => {
     const {stayDate, handleStayDate, stayCount, handleStayCount} = useContext(SearchContext)
     return (
-        <div className="flex items-center px-4 py-2 divide-x lg:divide-x-0 lg:mt-3 lg:px-0 lg:py-0">
+        <div className="flex items-center px-4 py-2 divide-x lg:divide-x-0 lg:px-0 lg:py-0">
             <div className="flex items-center flex-1 lg:w-3/4">
                 <CalendarIcon className="w-6 h-6 text-hotel-green"></CalendarIcon>
                 <DatePicker
@@ -18,7 +18,7 @@ const StayDateInput = () => {
                     onChange={handleStayDate}
                     nextMonthButtonLabel=">"
                     previousMonthButtonLabel="<"
-                    className="relative w-full px-2 py-2 pl-4 text-lg font-medium bg-white rounded-md cursor-pointer hover:bg-opacity-25 hover:bg-gray-300 lg:font-bold">
+                    className="relative w-full px-2 py-2 text-lg font-medium bg-red-200 rounded-md cursor-pointer hover:bg-opacity-25 hover:bg-gray-300 lg:font-bold">
                 </DatePicker>
             </div>
             <div className="flex items-center lg:w-1/4">

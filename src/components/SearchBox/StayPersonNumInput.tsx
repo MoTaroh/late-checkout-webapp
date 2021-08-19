@@ -5,7 +5,7 @@ import { SearchContext } from '../../App'
 const StayPersonNumInput = () => {
     const {personNum, handlePersonNum} = useContext(SearchContext)
     return (
-        <div className="flex items-center px-4 lg:px-0 lg:mt-3">
+        <div className="flex items-center px-4 lg:px-0">
             <UserIcon className="w-6 h-6 text-hotel-green"></UserIcon>
             <select
                 id="person_num"
