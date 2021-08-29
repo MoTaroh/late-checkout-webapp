@@ -13,8 +13,11 @@ const hotelList = [
     {"hotelName": "アパホテル〈淀屋橋 北浜駅前〉","hotelNo": "369184"},
     {"hotelName": "アパホテル＆リゾート〈御堂筋本町駅タワー〉（全室禁煙）","hotelNo": "376554"},
     {"hotelName": "イビス大阪梅田","hotelNo": "339535"},
+    {"hotelName": "ＪＲ西日本グループ　ヴィアイン心斎橋","hotelNo": "378268"},
+    {"hotelName": "ＪＲ西日本グループ　ヴィアイン心斎橋四ツ橋","hotelNo": "341583"},
     {"hotelName": "スーパーホテルPremier大阪・本町　天然温泉　四季彩の湯","hotelNo": "308796"},
     {"hotelName": "スーパーホテル梅田・肥後橋","hotelNo": "328798"},
+    {"hotelName": "ハートンホテル心斎橋長堀通","hotelNo": "306639"},
     {"hotelName": "プレミアホテル－CABIN－大阪","hotelNo": "328778"},
     {"hotelName": "ホテルＷＢＦ本町","hotelNo": "377707"},
     {"hotelName": "ホテルマイステイズプレミア堂島","hotelNo": "334326"},
@@ -22,7 +25,7 @@ const hotelList = [
     {"hotelName": "ホテルマイステイズ堺筋本町","hotelNo": "304638"},
     {"hotelName": "東急ステイ大阪本町（2020年2月27日グランドオープン）","hotelNo": "307894"},
     {"hotelName": "ホテルグレイスリー大阪なんば","hotelNo": "330578"},
-    {"hotelName": "ホテルヒラリーズ心斎橋","hotelNo": "363847"},
+    {"hotelName": "ホテルヒラリーズ心斎橋(Switch繋がらず)","hotelNo": "363847"},
 ]
 
 const HotelListPage = () => {
