@@ -9,7 +9,7 @@ export default function SelectList(props: any) {
   return (
       <Listbox value={selected} onChange={setSelected}>
         <div className="relative w-60 sm:w-96">
-          <Listbox.Button className="relative w-full py-2 pl-3 pr-10 text-left bg-white border border-gray-300 rounded-lg cursor-default focus:outline-none focus-visible:ring-2 focus-visible:ring-opacity-75 focus-visible:ring-white focus-visible:ring-offset-orange-300 focus-visible:ring-offset-2 focus-visible:border-indigo-500 sm:text-sm">
+          <Listbox.Button className="relative w-full py-2 pl-3 pr-10 text-left bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-opacity-75 focus:ring-hotel-green focus:border-hotel-green sm:text-sm">
             <span className="block text-sm text-gray-700 truncate">{selected}</span>
             <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
               <ChevronDownIcon
