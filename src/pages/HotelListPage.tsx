@@ -37,7 +37,19 @@ const HotelListPage = () => {
             </div>
           </div>
         )}
-        {isLoading && <span>isLoading...</span>}
+        {isLoading && (
+          <div className="flex flex-col p-8 mt-6 bg-white border border-gray-300 md:mt-8 lg:mt-10 rounded-xl">
+            <div className="font-bold text-gray-700">
+              小人さんがせっせと探しています
+            </div>
+            <div className="mt-2 font-bold text-gray-700">
+              温かく応援してあげてください
+            </div>
+            <div className="flex justify-center mt-8">
+              <div className="w-2 h-2 rounded-full bg-hotel-green animate-ping"></div>
+            </div>
+          </div>
+        )}
         <Footer></Footer>
       </div>
     </div>
