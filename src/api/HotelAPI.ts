@@ -33,6 +33,7 @@ export const callHotelsApi = async (
       executionArn: execiteData.executionArn,
     };
 
+    await sleep(2000);
     while (true) {
       let describeRes = await axios.post(describeUrl, describePayload);
       console.log(describeRes);
