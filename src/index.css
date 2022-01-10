@@ -4,7 +4,7 @@
 
 /* for react-datepicker */
 .react-datepicker__input-container input {
-  @apply block w-full text-base bg-white border-0 rounded md:text-sm form-input;
+  @apply block w-full bg-white border-0 rounded form-input;
 }
 
 .react-datepicker__tab-loop {
@@ -12,7 +12,7 @@
 }
 
 .react-datepicker-popper {
-  @apply absolute z-10 left-0 w-72 text-sm transform -translate-y-6 lg:-translate-y-16 rounded-lg bg-white shadow px-3 py-2 !important;
+  @apply absolute z-10 left-0 w-72 text-sm transform -translate-y-6 rounded-lg bg-white shadow px-3 py-2 !important;
 }
 
 .react-datepicker__month-container {
