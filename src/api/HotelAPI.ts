@@ -54,31 +54,4 @@ export const callHotelsApi = async (
   } catch (error) {
     console.log(error);
   }
-
-  //   axios
-  //     .post(executeUrl, executePayload)
-  //     .then((res) => {
-
-  //       // 処理が終わってoutputが返ってくるまでポーリング
-  //       const intervalId = setInterval(() => {
-  //         axios
-  //           .post(describeUrl, describePayload)
-  //           .then((res) => {
-  //             console.log(res);
-  //             if (res.data.output) {
-  //               clearInterval(intervalId);
-  //               return JSON.parse(res.data.output);
-  //             }
-  //           })
-  //           .catch((err) => {
-  //             console.log(err);
-  //             clearInterval(intervalId);
-  //           });
-  //       }, 10000);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // }
-  // };
 };
