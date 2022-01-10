@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Hotel } from "../types/types";
 import HotelListItem from "./HotelListItem";
 import RegionName from "./RegionName";
