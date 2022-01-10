@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Hotel } from "../types/types";
 import HotelListItem from "./HotelListItem";
 import RegionName from "./RegionName";
@@ -12,9 +12,36 @@ type Result = {
   [key: string]: Array<Hotel>;
 };
 
+const defaultRegion = "地域を選択";
+
+const displayHotels = (result: Result, filterRegion: string) => {
+  let rows: any[] = [];
+  if (filterRegion === defaultRegion) {
+    // no filter
+    Object.keys(result).forEach((key) => {
+      rows.push(<RegionName regionName={key} key={key} />);
+      result[key].forEach((hotel: Hotel) =>
+        rows.push(<HotelListItem hotel={hotel} key={hotel.hotelNo} />)
+      );
+    });
+  } else {
+    // filter
+    Object.keys(result).forEach((key) => {
+      if (key === filterRegion) {
+        rows.push(<RegionName regionName={key} key={key} />);
+        result[key].forEach((hotel: Hotel) =>
+          rows.push(<HotelListItem hotel={hotel} key={hotel.hotelNo} />)
+        );
+      }
+    });
+  }
+  return rows;
+};
+
 const HotelList: React.VFC<Props> = ({ hotels }) => {
-  const rows: any[] = [];
-  const regionList: string[] = [];
+  const [selected, setSelected] = useState(defaultRegion);
+
+  const regionList: string[] = [defaultRegion];
 
   // hotelsを走査して、地域ごとにグルーピングする
   let result: Result = {};
@@ -34,24 +61,21 @@ const HotelList: React.VFC<Props> = ({ hotels }) => {
     result[hotel.regionName].push(hotel);
   });
 
-  console.log(result);
-
-  Object.keys(result).forEach((key) => {
-    rows.push(<RegionName regionName={key} key={key} />);
-    result[key].forEach((hotel: Hotel) =>
-      rows.push(<HotelListItem hotel={hotel} key={hotel.hotelNo} />)
-    );
-  });
-
   return (
     <div className="flex flex-col flex-1 space-y-3 lg:col-span-2 lg:space-y-6">
       <div className="flex items-start justify-between">
         <h2 className="flex-none text-lg font-bold text-gray-800 ">
           ホテル一覧
         </h2>
-        <SelectList regions={regionList}></SelectList>
+        <SelectList
+          regions={regionList}
+          selected={selected}
+          setSelected={setSelected}
+        ></SelectList>
       </div>
-      <div className="relative space-y-3 lg:space-y-6">{rows}</div>
+      <div className="relative space-y-3 lg:space-y-6">
+        {displayHotels(result, selected)}
+      </div>
     </div>
   );
 };
