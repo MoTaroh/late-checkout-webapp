@@ -23,13 +23,15 @@ const NavBar2 = () => {
         </div>
       </div>
       {state && (
-        <div className="flex flex-col px-6 py-8 bg-white lg:hidden">
+        <div className="flex flex-col px-6 py-8 bg-white shadow lg:hidden">
           <div className="flex justify-end">
             <button onClick={() => setState(!state)}>
               <XIcon className="w-6 h-6 text-gray-700"></XIcon>
             </button>
           </div>
-          <SearchBox></SearchBox>
+          <div className="flex justify-center">
+            <SearchBox></SearchBox>
+          </div>
         </div>
       )}
     </div>
