@@ -16,24 +16,36 @@ const defaultRegion = "地域を選択";
 
 const displayHotels = (result: Result, filterRegion: string) => {
   let rows: any[] = [];
-  if (filterRegion === defaultRegion) {
-    // no filter
-    Object.keys(result).forEach((key) => {
-      rows.push(<RegionName regionName={key} key={key} />);
-      result[key].forEach((hotel: Hotel) =>
-        rows.push(<HotelListItem hotel={hotel} key={hotel.hotelNo} />)
-      );
-    });
+  console.log(result);
+
+  if (Object.keys(result)[0] === "") {
+    rows.push(
+      <div key="" className="p-3 bg-white border border-gray-300 rounded-xl">
+        <div className="text-sm text-gray-500">
+          レイトチェックアウトプランが見つかりませんでした。
+        </div>
+      </div>
+    );
   } else {
-    // filter
-    Object.keys(result).forEach((key) => {
-      if (key === filterRegion) {
+    if (filterRegion === defaultRegion) {
+      // no filter
+      Object.keys(result).forEach((key) => {
         rows.push(<RegionName regionName={key} key={key} />);
         result[key].forEach((hotel: Hotel) =>
           rows.push(<HotelListItem hotel={hotel} key={hotel.hotelNo} />)
         );
-      }
-    });
+      });
+    } else {
+      // filter
+      Object.keys(result).forEach((key) => {
+        if (key === filterRegion) {
+          rows.push(<RegionName regionName={key} key={key} />);
+          result[key].forEach((hotel: Hotel) =>
+            rows.push(<HotelListItem hotel={hotel} key={hotel.hotelNo} />)
+          );
+        }
+      });
+    }
   }
   return rows;
 };
