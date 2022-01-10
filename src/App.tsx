@@ -2,7 +2,27 @@ import React, { useState, createContext } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import TopPage from "./pages/TopPage";
 import HotelListPage from "./pages/HotelListPage";
+import { Hotel } from "./types/types";
 
+const initialHotels: Hotel = {
+  hotelNo: 0,
+  hotelName: "",
+  regionName: "",
+  planList: [
+    {
+      planName: "",
+      checkInTime: "",
+      checkOutTime: "",
+      roomList: [
+        {
+          roomName: "",
+          roomURL: "",
+          roomPrice: "",
+        },
+      ],
+    },
+  ],
+};
 // 検索ボックスのContext
 export const SearchContext = createContext({
   stayDate: new Date(),
@@ -13,6 +33,8 @@ export const SearchContext = createContext({
   handlePersonNum: (event: any) => {},
   isLoading: false,
   handleIsLoading: (bool: boolean) => {},
+  hotels: [initialHotels],
+  handleHotels: (hotels: Array<Hotel>) => {},
 });
 
 function App() {
@@ -38,6 +60,11 @@ function App() {
   const handleIsLoading = (bool: boolean) => {
     setIsLoading(bool);
   };
+  // ホテル達
+  const [hotels, setHotels] = useState([initialHotels]);
+  const handleHotels = (hotels: Array<Hotel>) => {
+    setHotels(hotels);
+  };
 
   return (
     <SearchContext.Provider
@@ -50,6 +77,8 @@ function App() {
         handlePersonNum,
         isLoading,
         handleIsLoading,
+        hotels,
+        handleHotels,
       }}
     >
       <Router>

@@ -1,19 +1,26 @@
-import { ChevronRightIcon } from '@heroicons/react/outline'
-import React from 'react'
+import { ChevronRightIcon } from "@heroicons/react/outline";
+import React from "react";
+import { Room } from "../types/types";
 
 type Props = {
-    room: any,
-    url: string
-}
+  room: Room;
+};
 
-const RoomItem = (props: Props) => {
-    return (
-        <a href={props.url} rel="noopener noreferrer" target="_blank" className="flex items-center justify-between py-2 pl-2 space-x-2 rounded-lg hover:bg-gray-800 hover:bg-opacity-5">
-            <span className="flex-grow text-sm text-gray-700">{props.room.roomName}</span>
-            <span className="flex-shrink-0 text-sm font-bold text-hotel-green">¥ {props.room.roomPrice}</span>
-            <ChevronRightIcon className="flex-shrink-0 w-6 h-6 text-hotel-green"/>
-        </a>
-    )
-}
+const RoomItem: React.VFC<Props> = ({ room }) => {
+  return (
+    <a
+      href={room.roomURL}
+      rel="noopener noreferrer"
+      target="_blank"
+      className="flex items-center justify-between py-2 pl-2 space-x-2 rounded-lg hover:bg-gray-800 hover:bg-opacity-5"
+    >
+      <span className="flex-grow text-sm text-gray-700">{room.roomName}</span>
+      <span className="flex-shrink-0 text-sm font-bold text-hotel-green">
+        {room.roomPrice}
+      </span>
+      <ChevronRightIcon className="flex-shrink-0 w-6 h-6 text-hotel-green" />
+    </a>
+  );
+};
 
-export default RoomItem
+export default RoomItem;
