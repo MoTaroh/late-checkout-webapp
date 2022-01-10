@@ -4,7 +4,7 @@ import ja from "date-fns/locale/ja";
 import StayDateInput from "../SearchBox/StayDateInput";
 import StayPrefectureInput from "../SearchBox/StayPrefectureInput";
 import StayPersonNumInput from "../SearchBox/StayPersonNumInput";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { SearchContext } from "../../App";
 import { callHotelsApi } from "../../api/HotelAPI";
 import { useHistory } from "react-router-dom";
