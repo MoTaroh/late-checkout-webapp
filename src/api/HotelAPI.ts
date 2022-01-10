@@ -33,7 +33,7 @@ export const callHotelsApi = async (
       executionArn: execiteData.executionArn,
     };
 
-    await sleep(2000);
+    await sleep(3000);
     while (true) {
       let describeRes = await axios.post(describeUrl, describePayload);
       console.log(describeRes);
@@ -49,7 +49,11 @@ export const callHotelsApi = async (
 
         return body.items;
       }
-      await sleep(5000);
+      if (describeData.status === "FAILED") {
+        console.log("FAILED.");
+        return [];
+      }
+      await sleep(10000);
     }
   } catch (error) {
     console.log(error);
