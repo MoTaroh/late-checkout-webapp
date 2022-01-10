@@ -14,15 +14,15 @@ registerLocale("ja", ja);
 const SearchBox = () => {
   // プラン検索したら画面遷移
   const history = useHistory();
-  const { stayDate, stayCount, personNum, handleIsLoading } =
+  const { stayDate, stayCount, personNum, handleIsLoading, handleHotels } =
     useContext(SearchContext);
 
-  const handleLink = async (path: any) => {
+  const handleLink = async (path: string) => {
     handleIsLoading(true);
     history.push(path);
     const hotels = await callHotelsApi(stayDate, stayCount, personNum);
+    handleHotels(hotels);
     handleIsLoading(false);
-    console.log(hotels);
   };
 
   return (
