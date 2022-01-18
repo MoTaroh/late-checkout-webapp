@@ -14,7 +14,7 @@ const HotelListPage = () => {
         {!isLoading && (
           <div className="grid gap-6 mt-6 md:mt-8 lg:mt-10 lg:grid-cols-3">
             {hotels && <HotelList hotels={hotels} />}
-            <div className="hidden mt-5 lg:block">
+            <div className="hidden lg:block">
               <h2 className="text-lg font-bold text-gray-800 ">人気のホテル</h2>
               <div className="flex items-center justify-center h-64 p-3 mt-3 bg-white border border-gray-300 rounded-xl">
                 <h3 className="font-bold truncate">Coming soon.</h3>
