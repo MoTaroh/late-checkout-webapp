@@ -53,7 +53,10 @@ const TopPage = () => {
                 ステイホテル
               </h3>
               <p className="mt-4 text-lg text-center text-gray-700">
-                ホテルに滞在してコロナ禍を安全に過ごそう
+                ホテルに滞在してコロナ禍を
+              </p>
+              <p className="text-lg text-center text-gray-700">
+                安全に過ごそう
               </p>
             </div>
             <div className="flex flex-col items-center break-words">
@@ -71,8 +74,9 @@ const TopPage = () => {
                 ワーケーション
               </h3>
               <p className="mt-4 text-lg text-center text-gray-700">
-                リモートワークに適したプランも見つかるかも
+                リモートワークに適したプランも
               </p>
+              <p className="text-lg text-center text-gray-700">見つかるかも</p>
             </div>
           </div>
         </div>
@@ -107,6 +111,8 @@ const TopPage = () => {
                 <div>
                   <p className="text-lg text-gray-700">
                     検索条件にマッチしたレイトチェックアウトプランがホテルごとに表示されます。
+                  </p>
+                  <p className="text-lg text-gray-700">
                     気に入ったプランをクリックして詳細を確認しよう。
                   </p>
                   <p className="text-lg text-gray-600">
@@ -122,10 +128,14 @@ const TopPage = () => {
                 <h3 className="text-2xl font-bold text-gray-800">
                   3. ホテルをお気に入りに登録する
                 </h3>
-                <p className="text-lg text-gray-700">
-                  ログインすれば、よく使うホテルをお気に入り登録することができます。
-                  ホテル名の横のハートマークをポチッとしよう。
-                </p>
+                <div>
+                  <p className="text-lg text-gray-700">
+                    ログインすれば、よく使うホテルをお気に入り登録することができます。
+                  </p>
+                  <p className="text-lg text-gray-700">
+                    ホテル名の横のハートマークをポチッとしよう。
+                  </p>
+                </div>
               </div>
             </div>
           </div>
