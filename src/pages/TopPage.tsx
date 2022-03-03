@@ -1,10 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Footer from "../components/Footer";
 import Hero from "../components/Hero";
 import NavBar from "../components/NavBar/NavBar";
+import NavBar2 from "../components/NavBar/NavBar2";
 import SearchBox from "../components/SearchBox";
 
 const TopPage = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const toggleScrollState = () => {
+    window.scrollY > window.innerHeight
+      ? setIsScrolled(true)
+      : setIsScrolled(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", toggleScrollState);
+    return () => {
+      window.removeEventListener("scroll", toggleScrollState);
+    };
+  }, []);
+
   return (
     <>
       <div className="object-center bg-center bg-cover bg-hero-image">
@@ -18,7 +34,7 @@ const TopPage = () => {
           </div>
         </div>
       </div>
-      <div className="container flex mt-44 mb-60">
+      <div className="container flex mt-44 mb-60 w">
         {/* Content */}
         <div className="w-2/3">
           <div className="text-5xl font-bold">
@@ -81,7 +97,7 @@ const TopPage = () => {
           </div>
         </div>
       </div>
-      <div className="">
+      <div>
         <div className="container pt-10 pb-24">
           <h1 className="text-4xl font-bold text-center text-gray-800">
             How to use.
@@ -141,6 +157,7 @@ const TopPage = () => {
           </div>
         </div>
       </div>
+      {isScrolled && <NavBar2></NavBar2>}
       <Footer></Footer>
     </>
   );
