@@ -25,6 +25,9 @@ module.exports = {
         },
         backgroundImage: theme => ({
             "hero-image": "url('./images/hero_bg.jpg')",
+            "hotel-image": "url('./images/hotel.jpeg')",
+            "evening-image": "url('./images/evening.jpeg')",
+            "workation-image": "url('./images/workation.jpeg')",
         }),
     },
     container: {
