@@ -94,3 +94,12 @@
 .react-datepicker__day--range-end {
   @apply text-white bg-blue-500 hover:text-gray-700 hover:bg-white;
 }
+
+/* for utility class */
+.h1 {
+  @apply text-xl font-bold text-center text-gray-800 sm:text-4xl;
+}
+
+.h3 {
+  @apply text-lg font-bold text-gray-800 sm:text-2xl;
+}
