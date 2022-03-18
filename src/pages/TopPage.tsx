@@ -56,9 +56,7 @@ const TopPage = () => {
           </div>
           {/* Image */}
           <div className="flex justify-center mb-10 lg:justify-end">
-            {/* <img src="" alt="" /> */}
-            {/* <div className="h-48 border shadow-xl bg-desktop-ui-image w-80 lg:transform lg:translate-x-20 lg:translate-y-8 lg:w-[476px] lg:h-72 rounded-lg border-slate-100 image-base"></div> */}
-            <div className="h-[491px] rounded-xl shadow-xl border-4 bg-mobile-ui-image w-80 border-slate-100 image-base"></div>
+            <div className="h-[491px] rounded-xl shadow-xl border-4 border-b-8 bg-mobile-ui-image w-80 border-slate-100 image-base"></div>
           </div>
         </div>
       </div>
@@ -106,14 +104,14 @@ const TopPage = () => {
                   <p className="text-slate-700 description lg:text-left">
                     宿泊希望日と都道府県、宿泊人数を入力して検索しよう。
                   </p>
-                  <p className="text-slate-600 description lg:text-left">
+                  <p className="text-slate-500 description lg:text-left">
                     ※現在は大阪府のホテルしか検索できません。
                   </p>
                 </div>
               </div>
             </div>
             <div className="flex flex-col-reverse items-center space-y-3 space-y-reverse break-words lg:items-start lg:grid lg:grid-cols-3 lg:gap-6">
-              <div className="flex flex-col items-center space-y-2 lg:items-start lg:col-span-2 lg:pt-4 lg:space-y-6">
+              <div className="flex flex-col items-center mt-3 space-y-2 lg:items-start lg:col-span-2 lg:pt-4 lg:space-y-6">
                 <h3 className="h3 first-letter:text-3xl first-letter:font-perisienne text-hotel-green">
                   2. プラン一覧をチェックする
                 </h3>
@@ -124,7 +122,7 @@ const TopPage = () => {
                   <p className="text-slate-700 description lg:text-left">
                     気に入ったプランをクリックして詳細を確認しよう。
                   </p>
-                  <p className="text-slate-600 description lg:text-left">
+                  <p className="text-slate-500 description lg:text-left">
                     ※じゃらん様のページへと遷移します。
                   </p>
                 </div>
