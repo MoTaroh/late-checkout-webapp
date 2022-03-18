@@ -19,6 +19,7 @@ const StayDateInput = () => {
           onChange={handleStayDate}
           nextMonthButtonLabel=">"
           previousMonthButtonLabel="<"
+          onFocus={(e) => e.target.blur()}
           className="relative w-full px-2 py-2 text-lg font-medium bg-red-200 rounded-md cursor-pointer hover:bg-opacity-25 hover:bg-slate-300 lg:font-bold"
         ></DatePicker>
       </div>
