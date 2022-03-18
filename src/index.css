@@ -109,7 +109,7 @@
 }
 
 .lp-image {
-  @apply w-full h-56 rounded-lg shadow-sm image-base;
+  @apply w-full h-56 max-w-xs rounded-lg shadow-sm image-base;
 }
 
 .image-base {
