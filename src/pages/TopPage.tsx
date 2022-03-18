@@ -34,111 +34,111 @@ const TopPage = () => {
           </div>
         </div>
       </div>
-      <div className="container flex flex-col-reverse px-6 mt-24 mb-24 sm:px-0 sm:flex-row sm:mt-44 sm:mb-60">
-        {/* Content */}
-        <div className="sm:w-2/3">
-          <div className="text-2xl font-bold text-center sm:text-left sm:text-5xl">
-            <span className="text-gray-800">What's </span>
-            <span className="text-hotel-green">LongSty</span>
+      <div className="py-24 bg-bottom bg-cover bg-wave-image lg:transform-none lg:pt-44 lg:pb-60 flip-updown">
+        <div className="container flex flex-col-reverse h-full px-6 flip-updown lg:transform-none lg:px-0 lg:flex-row ">
+          {/* Content */}
+          <div className="lg:w-2/3">
+            <div className="text-2xl font-bold text-center lg:text-left lg:text-5xl">
+              <span className="text-slate-800">What's </span>
+              <span className="text-hotel-green">LongSty</span>
+            </div>
+            <div className="mt-6 text-base leading-7 lg:leading-10 lg:mt-12 lg:text-2xl">
+              <span className="font-bold text-hotel-green">
+                夜18時など遅くまで滞在可能なレイトチェックアウトプラン
+              </span>
+              <span className="text-slate-700">
+                を検索することができるサービスです。
+                通常は朝11時などにホテルを出なければいけませんが、夕方までホテルでゆっくり過ごすことができます。
+              </span>
+            </div>
           </div>
-          <div className="mt-6 text-base leading-7 sm:leading-10 sm:mt-12 sm:text-2xl">
-            <span className="font-bold text-hotel-green">
-              夜18時など遅くまで滞在可能なレイトチェックアウトプラン
-            </span>
-            <span className="text-gray-700">
-              を検索することができるサービスです。
-              通常は朝11時などにホテルを出なければいけませんが、夕方までホテルでゆっくり過ごすことができます。
-            </span>
+          {/* Image */}
+          <div className="flex justify-center mb-10 lg:justify-end lg:w-1/3">
+            {/* <img src="" alt="" /> */}
+            <div className="h-48 border shadow-xl bg-desktop-ui-image w-80 lg:transform lg:translate-x-10 lg:translate-x-20 lg:translate-y-8 lg:w-96 lg:h-56 rounded-xl border-slate-100 image-base"></div>
           </div>
-        </div>
-        {/* Image */}
-        <div className="flex justify-center mb-10 sm:justify-end sm:w-1/3">
-          {/* <img src="" alt="" /> */}
-          <div className="h-48 bg-gray-200 shadow-xl w-80 sm:transform sm:translate-x-10 sm:translate-y-8 sm:w-80 rounded-xl"></div>
         </div>
       </div>
-      <div className="bg-gray-100">
-        <div className="container pt-10 sm:pb-24">
+      <div className="bg-slate-100">
+        <div className="container pt-10 lg:pb-24">
           <h1 className="h1">How it works.</h1>
-          <div className="flex w-full gap-6 px-10 pb-10 overflow-x-auto sm:pb-0 sm:px-0 snap-x sm:grid sm:grid-cols-3 sm:gap-24 mt-9">
+          <div className="flex w-full gap-6 px-10 pb-10 mt-6 overflow-x-auto lg:pb-0 lg:px-0 snap-x lg:grid lg:grid-cols-3 lg:gap-24">
             <div className="relative flex flex-col items-center flex-shrink-0 overflow-hidden break-words w-72 snap-center">
-              <div className="object-center w-full h-56 bg-center bg-cover rounded-lg shadow-sm bg-hotel-image"></div>
-              <h3 className="mt-6 h3">ステイホテル</h3>
-              <p className="mt-4 text-lg text-center text-gray-700">
+              <div className="lp-image bg-hotel-image"></div>
+              <h3 className="mt-3 lg:mt-6 h3">ステイホテル</h3>
+              <p className="mt-2 text-slate-700 lg:mt-4 description">
                 ホテルに滞在してコロナ禍を
               </p>
-              <p className="text-lg text-center text-gray-700">
-                安全に過ごそう
-              </p>
+              <p className="text-slate-700 description">安全に過ごそう</p>
             </div>
             <div className="relative flex flex-col items-center flex-shrink-0 overflow-hidden break-words w-72 snap-center">
-              <div className="object-center w-full h-56 bg-center bg-cover rounded-lg shadow-sm bg-evening-image"></div>
-              <h3 className="mt-6 h3">遅くまでゆっくり</h3>
-              <p className="mt-4 text-lg text-center text-gray-700">
+              <div className="lp-image bg-evening-image"></div>
+              <h3 className="mt-3 lg:mt-6 h3">遅くまでゆっくり</h3>
+              <p className="mt-2 text-slate-700 lg:mt-4 description">
                 普段会えない恋人や友人と遅くまでゆっくり過ごそう
               </p>
             </div>
             <div className="relative flex flex-col items-center flex-shrink-0 overflow-hidden break-words w-72 snap-center">
-              <div className="object-center w-full h-56 bg-center bg-cover rounded-lg shadow-sm bg-workation-image"></div>
-              <h3 className="mt-6 h3">ワーケーション</h3>
-              <p className="mt-4 text-lg text-center text-gray-700">
+              <div className="lp-image bg-workation-image"></div>
+              <h3 className="mt-3 lg:mt-6 h3">ワーケーション</h3>
+              <p className="mt-2 text-slate-700 lg:mt-4 description">
                 リモートワークに適したプランも
               </p>
-              <p className="text-lg text-center text-gray-700">見つかるかも</p>
+              <p className="text-slate-700 description">見つかるかも</p>
             </div>
           </div>
         </div>
       </div>
       <div>
-        <div className="container pt-10 pb-24">
+        <div className="container px-10 pt-10 pb-10 lg:pb-24">
           <h1 className="h1">How to use.</h1>
-          <div className="grid grid-rows-3 gap-16 mt-9">
-            <div className="grid grid-cols-3 gap-6 break-words">
-              <div className="w-full h-56 bg-gray-300 rounded-lg shadow-sm"></div>
-              <div className="flex flex-col col-span-2 pt-4 space-y-6 pl-11">
-                <h3 className="text-2xl font-bold text-gray-800">
+          <div className="flex flex-col gap-6 mt-6 lg:grid lg:grid-rows-3 lg:gap-16">
+            <div className="flex flex-col space-y-3 break-words lg:grid lg:grid-cols-3 lg:gap-6">
+              <div className="lp-image bg-hotel-image"></div>
+              <div className="flex flex-col items-center space-y-2 lg:items-start lg:col-span-2 lg:pt-4 lg:space-y-6 lg:pl-11">
+                <h3 className="h3 first-letter:text-3xl first-letter:font-perisienne text-hotel-green">
                   1. 検索する
                 </h3>
                 <div>
-                  <p className="text-lg text-gray-700">
+                  <p className="text-slate-700 description lg:text-left">
                     宿泊希望日と都道府県、宿泊人数を入力して検索しよう。
                   </p>
-                  <p className="text-lg text-gray-600">
+                  <p className="text-slate-600 description lg:text-left">
                     ※現在は大阪府のホテルしか検索できません。
                   </p>
                 </div>
               </div>
             </div>
-            <div className="grid grid-cols-3 gap-6 break-words">
-              <div className="flex flex-col col-span-2 pt-4 space-y-6">
-                <h3 className="text-2xl font-bold text-gray-800">
+            <div className="flex flex-col-reverse space-y-3 space-y-reverse break-words lg:grid lg:grid-cols-3 lg:gap-6">
+              <div className="flex flex-col items-center space-y-2 lg:items-start lg:col-span-2 lg:pt-4 lg:space-y-6">
+                <h3 className="h3 first-letter:text-3xl first-letter:font-perisienne text-hotel-green">
                   2. プラン一覧をチェックする
                 </h3>
                 <div>
-                  <p className="text-lg text-gray-700">
+                  <p className="text-slate-700 description lg:text-left">
                     検索条件にマッチしたレイトチェックアウトプランがホテルごとに表示されます。
                   </p>
-                  <p className="text-lg text-gray-700">
+                  <p className="text-slate-700 description lg:text-left">
                     気に入ったプランをクリックして詳細を確認しよう。
                   </p>
-                  <p className="text-lg text-gray-600">
+                  <p className="text-slate-600 description lg:text-left">
                     ※じゃらん様のページへと遷移します。
                   </p>
                 </div>
               </div>
-              <div className="w-full h-56 bg-gray-300 rounded-lg shadow-sm"></div>
+              <div className="lp-image bg-workation-image"></div>
             </div>
-            <div className="grid grid-cols-3 gap-6 break-words">
-              <div className="w-full h-56 bg-gray-300 rounded-lg shadow-sm"></div>
-              <div className="flex flex-col col-span-2 pt-4 space-y-6 pl-11">
-                <h3 className="text-2xl font-bold text-gray-800">
+            <div className="flex flex-col space-y-3 break-words lg:grid lg:grid-cols-3 lg:gap-6">
+              <div className="lp-image bg-evening-image"></div>
+              <div className="flex flex-col items-center space-y-2 lg:items-start lg:col-span-2 lg:pt-4 lg:space-y-6 lg:pl-11">
+                <h3 className="h3 first-letter:text-3xl first-letter:font-perisienne text-hotel-green">
                   3. ホテルをお気に入りに登録する
                 </h3>
                 <div>
-                  <p className="text-lg text-gray-700">
+                  <p className="text-slate-700 description lg:text-left">
                     ログインすれば、よく使うホテルをお気に入り登録することができます。
                   </p>
-                  <p className="text-lg text-gray-700">
+                  <p className="text-slate-700 description lg:text-left">
                     ホテル名の横のハートマークをポチッとしよう。
                   </p>
                 </div>
