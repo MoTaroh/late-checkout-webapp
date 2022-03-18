@@ -35,35 +35,38 @@ const TopPage = () => {
         </div>
       </div>
       <div className="py-24 bg-bottom bg-cover bg-wave-image lg:transform-none lg:pt-44 lg:pb-60 flip-updown">
-        <div className="container flex flex-col-reverse h-full px-6 flip-updown lg:transform-none lg:px-0 lg:flex-row ">
+        <div className="container flex flex-col-reverse h-full px-6 flip-updown lg:transform-none lg:flex-row lg:justify-between">
           {/* Content */}
           <div className="lg:w-2/3">
             <div className="text-2xl font-bold text-center lg:text-left lg:text-5xl">
               <span className="text-slate-800">What's </span>
               <span className="text-hotel-green">LongSty</span>
             </div>
-            <div className="mt-6 text-base leading-7 lg:leading-10 lg:mt-12 lg:text-2xl">
+            <div className="mt-6 text-base leading-7 lg:leading-loose lg:mt-12 lg:text-2xl">
               <span className="font-bold text-hotel-green">
                 夜18時など遅くまで滞在可能なレイトチェックアウトプラン
               </span>
               <span className="text-slate-700">
-                を検索することができるサービスです。
+                を<br />
+                検索することができるサービスです。
+                <br />
                 通常は朝11時などにホテルを出なければいけませんが、夕方までホテルでゆっくり過ごすことができます。
               </span>
             </div>
           </div>
           {/* Image */}
-          <div className="flex justify-center mb-10 lg:justify-end lg:w-1/3">
+          <div className="flex justify-center mb-10 lg:justify-end">
             {/* <img src="" alt="" /> */}
-            <div className="h-48 border shadow-xl bg-desktop-ui-image w-80 lg:transform lg:translate-x-10 lg:translate-x-20 lg:translate-y-8 lg:w-96 lg:h-56 rounded-xl border-slate-100 image-base"></div>
+            {/* <div className="h-48 border shadow-xl bg-desktop-ui-image w-80 lg:transform lg:translate-x-20 lg:translate-y-8 lg:w-[476px] lg:h-72 rounded-lg border-slate-100 image-base"></div> */}
+            <div className="h-[491px] rounded-xl shadow-xl border-4 bg-mobile-ui-image w-80 border-slate-100 image-base"></div>
           </div>
         </div>
       </div>
       <div className="bg-slate-100">
-        <div className="container pt-10 lg:pb-24">
+        <div className="container px-0 pt-10 lg:px-4 lg:pb-24">
           <h1 className="h1">How it works.</h1>
           <div className="flex w-full gap-6 px-10 pb-10 mt-6 overflow-x-auto lg:pb-0 lg:px-0 snap-x lg:grid lg:grid-cols-3 lg:gap-24">
-            <div className="relative flex flex-col items-center flex-shrink-0 overflow-hidden break-words w-72 snap-center">
+            <div className="relative flex flex-col items-center flex-shrink-0 overflow-hidden break-words w-72 lg:w-full snap-center">
               <div className="lp-image bg-hotel-image"></div>
               <h3 className="mt-3 lg:mt-6 h3">ステイホテル</h3>
               <p className="mt-2 text-slate-700 lg:mt-4 description">
@@ -71,14 +74,14 @@ const TopPage = () => {
               </p>
               <p className="text-slate-700 description">安全に過ごそう</p>
             </div>
-            <div className="relative flex flex-col items-center flex-shrink-0 overflow-hidden break-words w-72 snap-center">
+            <div className="relative flex flex-col items-center flex-shrink-0 overflow-hidden break-words w-72 lg:w-full snap-center">
               <div className="lp-image bg-evening-image"></div>
               <h3 className="mt-3 lg:mt-6 h3">遅くまでゆっくり</h3>
               <p className="mt-2 text-slate-700 lg:mt-4 description">
                 普段会えない恋人や友人と遅くまでゆっくり過ごそう
               </p>
             </div>
-            <div className="relative flex flex-col items-center flex-shrink-0 overflow-hidden break-words w-72 snap-center">
+            <div className="relative flex flex-col items-center flex-shrink-0 overflow-hidden break-words w-72 lg:w-full snap-center">
               <div className="lp-image bg-workation-image"></div>
               <h3 className="mt-3 lg:mt-6 h3">ワーケーション</h3>
               <p className="mt-2 text-slate-700 lg:mt-4 description">
@@ -90,11 +93,11 @@ const TopPage = () => {
         </div>
       </div>
       <div>
-        <div className="container px-10 pt-10 pb-10 lg:pb-24">
+        <div className="container px-6 pt-10 pb-10 lg:pb-24">
           <h1 className="h1">How to use.</h1>
-          <div className="flex flex-col gap-6 mt-6 lg:grid lg:grid-rows-3 lg:gap-16">
-            <div className="flex flex-col space-y-3 break-words lg:grid lg:grid-cols-3 lg:gap-6">
-              <div className="lp-image bg-hotel-image"></div>
+          <div className="flex flex-col gap-8 mt-6 lg:grid lg:grid-rows-3 lg:gap-16">
+            <div className="flex flex-col items-center space-y-3 break-words lg:items-start lg:grid lg:grid-cols-3 lg:gap-6">
+              <div className="lp-image bg-search-image"></div>
               <div className="flex flex-col items-center space-y-2 lg:items-start lg:col-span-2 lg:pt-4 lg:space-y-6 lg:pl-11">
                 <h3 className="h3 first-letter:text-3xl first-letter:font-perisienne text-hotel-green">
                   1. 検索する
@@ -109,7 +112,7 @@ const TopPage = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col-reverse space-y-3 space-y-reverse break-words lg:grid lg:grid-cols-3 lg:gap-6">
+            <div className="flex flex-col-reverse items-center space-y-3 space-y-reverse break-words lg:items-start lg:grid lg:grid-cols-3 lg:gap-6">
               <div className="flex flex-col items-center space-y-2 lg:items-start lg:col-span-2 lg:pt-4 lg:space-y-6">
                 <h3 className="h3 first-letter:text-3xl first-letter:font-perisienne text-hotel-green">
                   2. プラン一覧をチェックする
@@ -126,10 +129,10 @@ const TopPage = () => {
                   </p>
                 </div>
               </div>
-              <div className="lp-image bg-workation-image"></div>
+              <div className="lp-image bg-planlist-image"></div>
             </div>
-            <div className="flex flex-col space-y-3 break-words lg:grid lg:grid-cols-3 lg:gap-6">
-              <div className="lp-image bg-evening-image"></div>
+            <div className="flex flex-col items-center space-y-3 break-words lg:items-start lg:grid lg:grid-cols-3 lg:gap-6">
+              <div className="lp-image bg-favorite-image"></div>
               <div className="flex flex-col items-center space-y-2 lg:items-start lg:col-span-2 lg:pt-4 lg:space-y-6 lg:pl-11">
                 <h3 className="h3 first-letter:text-3xl first-letter:font-perisienne text-hotel-green">
                   3. ホテルをお気に入りに登録する
