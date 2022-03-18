@@ -1,23 +1,10 @@
-const colors = require('tailwindcss/colors')
+
 
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    "./src/**/*.{html,js,jsx,ts,tsx}",
+  ],
   theme: {
-    colors: {
-        transparent: 'transparent',
-        current: 'currentColor',
-        black: colors.black,
-        white: colors.white,
-        gray: colors.blueGray,
-        red: colors.red,
-        yellow: colors.amber,
-        green: colors.emerald,
-        blue: colors.blue,
-        indigo: colors.indigo,
-        purple: colors.violet,
-        pink: colors.pink,
-    },
     extend: {
         colors: {
             "hotel-green": "#56919C",
@@ -28,7 +15,12 @@ module.exports = {
             "hotel-image": "url('./images/hotel.jpeg')",
             "evening-image": "url('./images/evening.jpeg')",
             "workation-image": "url('./images/workation.jpeg')",
+            "desktop-ui-image": "url('./images/desktop-ui.png')",
+            "wave-image": "url('./images/wave.svg')"
         }),
+        fontFamily: {
+          perisienne: "'Parisienne', cursive"
+        }
     },
     container: {
         center: true,
@@ -39,9 +31,6 @@ module.exports = {
             "2xl": "1124px",
         }
     }
-  },
-  variants: {
-    extend: {textDecoration: ['focus-visible'],},
   },
   plugins: [
     require("@tailwindcss/forms")({
