@@ -20,8 +20,8 @@ const displayHotels = (result: Result, filterRegion: string) => {
 
   if (Object.keys(result)[0] === "") {
     rows.push(
-      <div key="" className="p-3 bg-white border border-gray-300 rounded-xl">
-        <div className="text-sm text-gray-500">
+      <div key="" className="p-3 bg-white border border-slate-300 rounded-xl">
+        <div className="text-sm text-slate-500">
           レイトチェックアウトプランが見つかりませんでした。
         </div>
       </div>
@@ -76,7 +76,7 @@ const HotelList: React.VFC<Props> = ({ hotels }) => {
   return (
     <div className="flex flex-col flex-1 space-y-3 lg:col-span-2 lg:space-y-6">
       <div className="flex items-start justify-between">
-        <h2 className="flex-none text-lg font-bold text-gray-800 ">
+        <h2 className="flex-none text-lg font-bold text-slate-800 ">
           ホテル一覧
         </h2>
         <SelectList

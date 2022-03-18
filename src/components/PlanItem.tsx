@@ -14,7 +14,7 @@ const PlanItem: React.VFC<Props> = ({ plan }) => {
           {plan.checkOutTime}
         </div>
         <div className="flex flex-col flex-1 ml-5 space-y-2">
-          <span className="text-sm font-bold text-gray-800">
+          <span className="text-sm font-bold text-slate-800">
             {plan.planName}
           </span>
           <div className="hidden space-x-9 md:flex">

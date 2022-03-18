@@ -19,14 +19,14 @@ const NavBar2 = () => {
           Login
         </button>
         <div className="block sm:hidden">
-          <UserCircleIcon className="w-8 h-8 text-gray-500"></UserCircleIcon>
+          <UserCircleIcon className="w-8 h-8 text-slate-500"></UserCircleIcon>
         </div>
       </div>
       {state && (
         <div className="flex flex-col px-6 py-8 bg-white shadow lg:hidden">
           <div className="flex justify-end">
             <button onClick={() => setState(!state)}>
-              <XIcon className="w-6 h-6 text-gray-700"></XIcon>
+              <XIcon className="w-6 h-6 text-slate-700"></XIcon>
             </button>
           </div>
           <div className="flex justify-center">
