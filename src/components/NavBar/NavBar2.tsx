@@ -1,5 +1,6 @@
 import { UserCircleIcon, XIcon } from "@heroicons/react/outline";
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import SearchBox from "../SearchBox";
 import SearchBoxNav from "./SearchBoxNav";
 
@@ -10,10 +11,12 @@ const NavBar2 = () => {
   return (
     <div className="fixed inset-x-0 top-0 z-50 h-16 py-4 bg-white shadow md:h-20">
       <div className="container flex items-center justify-between h-full">
-        <h1 className="text-2xl font-bold sm:hidden text-hotel-green">L</h1>
-        <h1 className="hidden text-2xl font-bold sm:block text-hotel-green">
-          LongSty
-        </h1>
+        <Link to="/">
+          <h1 className="text-2xl font-bold sm:hidden text-hotel-green">L</h1>
+          <h1 className="hidden text-2xl font-bold sm:block text-hotel-green">
+            LongSty
+          </h1>
+        </Link>
         <SearchBoxNav state={state} setState={setState}></SearchBoxNav>
         <button className="hidden px-4 py-2 font-bold text-white rounded-md sm:block hover:bg-hotel-green-darker bg-hotel-green">
           Login
