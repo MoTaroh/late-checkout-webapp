@@ -16,7 +16,11 @@ module.exports = {
             "evening-image": "url('./images/evening.jpeg')",
             "workation-image": "url('./images/workation.jpeg')",
             "desktop-ui-image": "url('./images/desktop-ui.png')",
-            "wave-image": "url('./images/wave.svg')"
+            "mobile-ui-image": "url('./images/mobile-ui.png')",
+            "wave-image": "url('./images/wave.svg')",
+            "favorite-image": "url('./images/Favorite.svg')",
+            "search-image": "url('./images/search.svg')",
+            "planlist-image": "url('./images/planlist.svg')"
         }),
         fontFamily: {
           perisienne: "'Parisienne', cursive"
@@ -26,7 +30,7 @@ module.exports = {
         center: true,
         padding: '1rem',
         screens: {
-            lg: "1124px",
+            lg: "1024px",
             xl: "1124px",
             "2xl": "1124px",
         }
