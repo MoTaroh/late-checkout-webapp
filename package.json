@@ -23,11 +23,11 @@
         "web-vitals": "^1.0.1"
     },
     "scripts": {
-        "start": "craco start",
-        "start2": "concurrently \"npm run start:css\" \"react-scripts start\"",
+        "start": "concurrently \"npm run start:css\" \"react-scripts start\"",
         "start:css": "tailwindcss -o src/tailwind.css --watch",
-        "build": "craco build",
-        "test": "craco test",
+        "build": "npm run build:css && react-scripts build",
+        "build:css": "tailwindcss -o src/tailwind.css -m",
+        "test": "react-scripts test",
         "eject": "react-scripts eject",
         "lint": "yarn -s run eslint \"src/**/*.tsx\""
     },
