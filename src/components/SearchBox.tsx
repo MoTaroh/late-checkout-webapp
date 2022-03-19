@@ -27,7 +27,7 @@ const SearchBox = () => {
 
   return (
     <div className="flex flex-col w-full max-w-sm px-4 pb-4 bg-white shadow-xl lg:pt-4 lg:max-w-none lg:flex-row rounded-2xl">
-      <div className="flex flex-col text-gray-500 divide-y divide-gray-200 lg:mr-4 lg:divide-x lg:flex-1 lg:divide-y-0 lg:py-0 lg:flex-row">
+      <div className="flex flex-col text-slate-500 divide-y divide-slate-200 lg:mr-4 lg:divide-x lg:flex-1 lg:divide-y-0 lg:py-0 lg:flex-row">
         <div className="flex flex-col lg:w-1/2 lg:ml-4 lg:space-y-3">
           <SearchLabel text="宿泊希望日"></SearchLabel>
           <StayDateInput></StayDateInput>

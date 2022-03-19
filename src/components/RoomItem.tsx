@@ -12,9 +12,9 @@ const RoomItem: React.VFC<Props> = ({ room }) => {
       href={room.roomURL}
       rel="noopener noreferrer"
       target="_blank"
-      className="flex items-center justify-between py-2 pl-2 space-x-2 rounded-lg hover:bg-gray-800 hover:bg-opacity-5"
+      className="flex items-center justify-between py-2 pl-2 space-x-2 rounded-lg hover:bg-slate-800 hover:bg-opacity-5"
     >
-      <span className="flex-grow text-sm text-gray-700">{room.roomName}</span>
+      <span className="flex-grow text-sm text-slate-700">{room.roomName}</span>
       <span className="flex-shrink-0 text-sm font-bold text-hotel-green">
         {room.roomPrice}
       </span>

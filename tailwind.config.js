@@ -1,23 +1,10 @@
-const colors = require('tailwindcss/colors')
+
 
 module.exports = {
-  purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    "./src/**/*.{html,js,jsx,ts,tsx}",
+  ],
   theme: {
-    colors: {
-        transparent: 'transparent',
-        current: 'currentColor',
-        black: colors.black,
-        white: colors.white,
-        gray: colors.blueGray,
-        red: colors.red,
-        yellow: colors.amber,
-        green: colors.emerald,
-        blue: colors.blue,
-        indigo: colors.indigo,
-        purple: colors.violet,
-        pink: colors.pink,
-    },
     extend: {
         colors: {
             "hotel-green": "#56919C",
@@ -25,20 +12,29 @@ module.exports = {
         },
         backgroundImage: theme => ({
             "hero-image": "url('./images/hero_bg.jpg')",
+            "hotel-image": "url('./images/hotel.jpeg')",
+            "evening-image": "url('./images/evening.jpeg')",
+            "workation-image": "url('./images/workation.jpeg')",
+            "desktop-ui-image": "url('./images/desktop-ui.png')",
+            "mobile-ui-image": "url('./images/mobile-ui.png')",
+            "wave-image": "url('./images/wave.svg')",
+            "favorite-image": "url('./images/Favorite.svg')",
+            "search-image": "url('./images/search.svg')",
+            "planlist-image": "url('./images/planlist.svg')"
         }),
+        fontFamily: {
+          perisienne: "'Parisienne', cursive"
+        }
     },
     container: {
         center: true,
         padding: '1rem',
         screens: {
-            lg: "1124px",
+            lg: "1024px",
             xl: "1124px",
             "2xl": "1124px",
         }
     }
-  },
-  variants: {
-    extend: {textDecoration: ['focus-visible'],},
   },
   plugins: [
     require("@tailwindcss/forms")({

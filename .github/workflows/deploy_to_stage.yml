@@ -2,7 +2,7 @@ name: Staging deploy
 on:
   push:
     branches:
-      - master
+      - develop
 env:
   project-name: late-checkout-project
 
@@ -17,16 +17,6 @@ jobs:
         uses: actions/setup-node@v2
         with:
           node-version: "16"
-      # - name: Get Yarn Cache Directory Path
-      #     id: yarn-cache-dir-path
-      #     run: echo "::set-output name=dir::$(yarn cache dir)"
-      # - name: Cache Node Modules
-      #   uses: actions/cache@v1
-      #   with:
-      #     path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-      #     key: ${{ runner.os }}-${{ env.project-name }}-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-${{ env.project-name }}-
       - name: Package Install
         run: npm install
       - name: Lint
@@ -64,10 +54,10 @@ jobs:
           aws-region: "ap-northeast-1"
       - name: Deploy to S3
         run: |
-          aws s3 sync ./build s3://${{ secrets.AWS_S3_BUCKET_NAME }}
+          aws s3 sync ./build s3://${{ secrets.AWS_S3_BUCKET_NAME_STAGE }}
       - name: CloudFront Cache Clear
         run: |
-          CFID=$(aws cloudfront list-distributions --query "DistributionList.Items[].{Id:Id,Origin:Origins.Items[0].DomainName}[?contains(Origin,'${{ secrets.AWS_S3_BUCKET_NAME }}.s3')] | [0].Id" | sed 's/"//g')
+          CFID=$(aws cloudfront list-distributions --query "DistributionList.Items[].{Id:Id,Origin:Origins.Items[0].DomainName}[?contains(Origin,'${{ secrets.AWS_S3_BUCKET_NAME_STAGE }}.s3')] | [0].Id" | sed 's/"//g')
           echo "aws cloudfront create-invalidation ${CFID}"
           aws cloudfront create-invalidation --distribution-id ${CFID} --paths "/*"
 

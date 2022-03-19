@@ -36,12 +36,12 @@ const SearchBoxNav: React.VFC<Props> = ({ state, setState }) => {
     <div className="flex items-center justify-center w-full">
       <button
         onClick={() => setState(!state)}
-        className="w-2/3 px-4 py-3 text-gray-500 bg-gray-100 cursor-pointer rounded-2xl lg:hidden"
+        className="w-2/3 px-4 py-3 text-slate-500 bg-slate-100 cursor-pointer rounded-2xl lg:hidden"
       >
         {dateToString()}
       </button>
-      <div className="items-center hidden px-4 py-2 space-x-2 border border-gray-300 lg:flex rounded-2xl">
-        <div className="flex text-gray-500 divide-x-2 divide-gray-100">
+      <div className="items-center hidden px-4 py-2 space-x-2 border border-slate-300 lg:flex rounded-2xl">
+        <div className="flex text-slate-500 divide-x-2 divide-slate-100">
           <div className="">
             <StayDateInput></StayDateInput>
           </div>
