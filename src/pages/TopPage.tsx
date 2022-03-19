@@ -63,7 +63,7 @@ const TopPage = () => {
       <div className="bg-slate-100">
         <div className="container px-0 pt-10 lg:px-4 lg:pb-24">
           <h1 className="h1">How it works.</h1>
-          <div className="flex w-full gap-6 px-10 pb-10 mt-6 overflow-x-auto lg:pb-0 lg:px-0 snap-x lg:grid lg:grid-cols-3 lg:gap-24">
+          <div className="flex w-full gap-6 px-10 pb-10 mt-6 overflow-x-auto lg:pb-0 lg:px-0 snap-x snap-mandatory lg:grid lg:grid-cols-3 lg:gap-24">
             <div className="relative flex flex-col items-center flex-shrink-0 overflow-hidden break-words w-72 lg:w-full snap-center">
               <div className="lp-image bg-hotel-image"></div>
               <h3 className="mt-3 lg:mt-6 h3">ステイホテル</h3>
@@ -105,7 +105,7 @@ const TopPage = () => {
                     宿泊希望日と都道府県、宿泊人数を入力して検索しよう。
                   </p>
                   <p className="text-slate-500 description lg:text-left">
-                    ※現在は大阪府のホテルしか検索できません。
+                    ※ 現在は大阪府のホテルしか検索できません。
                   </p>
                 </div>
               </div>
@@ -123,7 +123,7 @@ const TopPage = () => {
                     気に入ったプランをクリックして詳細を確認しよう。
                   </p>
                   <p className="text-slate-500 description lg:text-left">
-                    ※じゃらん様のページへと遷移します。
+                    ※ じゃらん様のページへと遷移します。
                   </p>
                 </div>
               </div>
@@ -141,6 +141,9 @@ const TopPage = () => {
                   </p>
                   <p className="text-slate-700 description lg:text-left">
                     ホテル名の横のハートマークをポチッとしよう。
+                  </p>
+                  <p className="text-slate-500 description lg:text-left">
+                    ※ お気に入り機能は未実装です。
                   </p>
                 </div>
               </div>
