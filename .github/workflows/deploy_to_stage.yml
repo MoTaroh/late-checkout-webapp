@@ -45,14 +45,22 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
-      - name: Publish to AWS S3 & CloudFront Cache Clear
-        uses: opspresso/action-s3-sync@master
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: "ap-northeast-1"
-          FROM_PATH: "./build"
-          DEST_PATH: ${{ secrets.AWS_S3_BUCKET_PATH_STAGE }}
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{secrets.AWS_ACCESS_KEY_ID}}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: "ap-northeast-1"
+      - name: Deploy to S3
+        run: |
+          aws s3 sync ./build s3://${{ secrets.AWS_S3_BUCKET_NAME_STAGE }}
+      - name: CloudFront Cache Clear
+        run: |
+          CFID=$(aws cloudfront list-distributions --query "DistributionList.Items[].{Id:Id,Origin:Origins.Items[0].DomainName}[?contains(Origin,'${{ secrets.AWS_S3_BUCKET_NAME_STAGE }}.s3')] | [0].Id" | sed 's/"//g')
+          echo "aws cloudfront create-invalidation ${CFID}"
+          aws cloudfront create-invalidation --distribution-id ${CFID} --paths "/*"
+
       - name: Slack Notification
         uses: 8398a7/action-slack@v3
         if: always()
