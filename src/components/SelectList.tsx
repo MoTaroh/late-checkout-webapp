@@ -12,13 +12,13 @@ const SelectList: React.VFC<Props> = ({ regions, selected, setSelected }) => {
   return (
     <Listbox value={selected} onChange={setSelected}>
       <div className="relative w-60 sm:w-96">
-        <Listbox.Button className="relative w-full py-2 pl-3 pr-10 text-left bg-white border border-gray-300 rounded-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-opacity-75 focus:ring-hotel-green focus:border-hotel-green sm:text-sm">
-          <span className="block text-sm text-gray-700 truncate">
+        <Listbox.Button className="relative w-full py-2 pl-3 pr-10 text-left bg-white border border-slate-300 rounded-lg cursor-pointer focus:outline-none focus:ring-2 focus:ring-opacity-75 focus:ring-hotel-green focus:border-hotel-green sm:text-sm">
+          <span className="block text-sm text-slate-700 truncate">
             {selected}
           </span>
           <span className="absolute inset-y-0 right-0 flex items-center pr-2 pointer-events-none">
             <ChevronDownIcon
-              className="w-5 h-5 text-gray-700"
+              className="w-5 h-5 text-slate-700"
               aria-hidden="true"
             />
           </span>
@@ -37,7 +37,7 @@ const SelectList: React.VFC<Props> = ({ regions, selected, setSelected }) => {
                   `${
                     active
                       ? "text-hotel-green-darker bg-hotel-green bg-opacity-25"
-                      : "text-gray-900"
+                      : "text-slate-900"
                   }
                           cursor-default select-none relative py-2 pl-10 pr-4`
                 }

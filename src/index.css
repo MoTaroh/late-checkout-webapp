@@ -24,7 +24,7 @@
 }
 
 .react-datepicker__current-month {
-  @apply ml-2.5 text-lg font-semibold text-gray-800;
+  @apply ml-2.5 text-lg font-semibold text-slate-800;
 }
 
 .react-datepicker__week {
@@ -32,7 +32,7 @@
 }
 
 .react-datepicker__day-names {
-  @apply flex justify-around text-xs font-medium text-center text-gray-800;
+  @apply flex justify-around text-xs font-medium text-center text-slate-800;
 }
 
 .react-datepicker__day-name {
@@ -44,15 +44,15 @@
 }
 
 .react-datepicker__navigation--previous {
-  @apply flex items-center justify-center w-8 h-8 transition rounded right-12 hover:bg-gray-200;
+  @apply flex items-center justify-center w-8 h-8 transition rounded right-12 hover:bg-slate-200;
 }
 
 .react-datepicker__navigation--next {
-  @apply flex items-center justify-center w-8 h-8 transition rounded right-4 hover:bg-gray-200;
+  @apply flex items-center justify-center w-8 h-8 transition rounded right-4 hover:bg-slate-200;
 }
 
 .react-datepicker__day {
-  @apply flex items-center justify-center w-8 h-8 py-1 mb-1 text-sm leading-loose text-gray-700 transition rounded;
+  @apply flex items-center justify-center w-8 h-8 py-1 mb-1 text-sm leading-loose transition rounded text-slate-700;
 }
 
 .react-datepicker__day--today {
@@ -64,11 +64,11 @@
 }
 
 .react-datepicker__day--outside-month {
-  @apply text-gray-400;
+  @apply text-slate-400;
 }
 
 .react-datepicker__day--in-range {
-  @apply bg-gray-200;
+  @apply bg-slate-200;
 }
 
 .react-datepicker__day--in-selecting-range {
@@ -88,9 +88,34 @@
 }
 
 .react-datepicker__day--range-start {
-  @apply text-white bg-blue-500 hover:text-gray-700 hover:bg-white;
+  @apply text-white bg-blue-500 hover:text-slate-700 hover:bg-white;
 }
 
 .react-datepicker__day--range-end {
-  @apply text-white bg-blue-500 hover:text-gray-700 hover:bg-white;
+  @apply text-white bg-blue-500 hover:text-slate-700 hover:bg-white;
+}
+
+/* for utility class */
+.h1 {
+  @apply text-xl font-bold text-center text-slate-800 sm:text-4xl;
+}
+
+.h3 {
+  @apply text-lg font-bold sm:text-2xl;
+}
+
+.description {
+  @apply text-sm font-normal text-center sm:text-lg;
+}
+
+.lp-image {
+  @apply w-full h-56 max-w-xs rounded-lg shadow-sm image-base;
+}
+
+.image-base {
+  @apply object-center bg-center bg-cover;
+}
+
+.flip-updown {
+  transform: scale(1, -1);
 }
