@@ -17,3 +17,11 @@ export type Room = {
   roomURL: string;
   roomPrice: string;
 };
+
+// type for cookies
+type handleCookie = (key: string, value: string, options?: object) => void;
+
+export type CookieOption = {
+  cookies: any;
+  handler: handleCookie;
+};
