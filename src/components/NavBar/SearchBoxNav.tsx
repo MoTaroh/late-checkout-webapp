@@ -16,6 +16,8 @@ type Props = {
   state: boolean;
   setState: React.Dispatch<React.SetStateAction<boolean>>;
 };
+
+// TODO: Remove duplication code from SearchBox.tsx
 const SearchBoxNav: React.VFC<Props> = ({ state, setState }) => {
   const history = useHistory();
   const { stayDate, stayCount, personNum, handleIsLoading, handleHotels } =

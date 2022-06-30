@@ -13,6 +13,7 @@ import { useCookies } from "react-cookie";
 import { CookieOption } from "../types/types";
 registerLocale("ja", ja);
 
+// TODO: Remove duplication code from SearchBoxNab.tsx
 const SearchBox = () => {
   // プラン検索したら画面遷移
   const history = useHistory();
