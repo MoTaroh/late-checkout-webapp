@@ -16,7 +16,6 @@ const defaultRegion = "地域を選択";
 
 const displayHotels = (result: Result, filterRegion: string) => {
   let rows: any[] = [];
-  console.log(result);
 
   if (Object.keys(result)[0] === "") {
     rows.push(
@@ -58,15 +57,12 @@ const HotelList: React.VFC<Props> = ({ hotels }) => {
   // hotelsを走査して、地域ごとにグルーピングする
   let result: Result = {};
   hotels.forEach((hotel: Hotel) => {
-    console.log(hotel);
     if (!hotel) {
       console.log("Skip for null value");
       return;
     }
 
     if (!regionList.includes(hotel.regionName)) {
-      console.log("Add to regionList");
-
       regionList.push(hotel.regionName);
       result[hotel.regionName] = [];
     }
