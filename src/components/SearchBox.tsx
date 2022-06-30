@@ -9,25 +9,41 @@ import StayPersonNumInput from "./SearchBox/StayPersonNumInput";
 import { callHotelsApi } from "../api/HotelAPI";
 import { SearchContext } from "../App";
 import { useContext } from "react";
+import { useCookies } from "react-cookie";
+import { CookieOption } from "../types/types";
 registerLocale("ja", ja);
 
+// TODO: Remove duplication code from SearchBoxNab.tsx
 const SearchBox = () => {
   // プラン検索したら画面遷移
   const history = useHistory();
   const { stayDate, stayCount, personNum, handleIsLoading, handleHotels } =
     useContext(SearchContext);
+  const [cookies, setCookie] = useCookies();
+  const handleCookie = (key: string, value: string, options: object = {}) => {
+    setCookie(key, value, options);
+  };
+  const cookieOption: CookieOption = {
+    cookies: cookies,
+    handler: handleCookie,
+  };
 
   const handleLink = async (path: string) => {
     handleIsLoading(true);
     history.push(path);
-    const hotels = await callHotelsApi(stayDate, stayCount, personNum);
+    const hotels = await callHotelsApi(
+      stayDate,
+      stayCount,
+      personNum,
+      cookieOption
+    );
     handleHotels(hotels);
     handleIsLoading(false);
   };
 
   return (
     <div className="flex flex-col w-full max-w-sm px-4 pb-4 bg-white shadow-xl lg:pt-4 lg:max-w-none lg:flex-row rounded-2xl">
-      <div className="flex flex-col text-slate-500 divide-y divide-slate-200 lg:mr-4 lg:divide-x lg:flex-1 lg:divide-y-0 lg:py-0 lg:flex-row">
+      <div className="flex flex-col divide-y text-slate-500 divide-slate-200 lg:mr-4 lg:divide-x lg:flex-1 lg:divide-y-0 lg:py-0 lg:flex-row">
         <div className="flex flex-col lg:w-1/2 lg:ml-4 lg:space-y-3">
           <SearchLabel text="宿泊希望日"></SearchLabel>
           <StayDateInput></StayDateInput>
