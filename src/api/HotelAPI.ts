@@ -115,7 +115,11 @@ export const callHotelsApi = async (
     hotelApi.setExecutePayload(searchParam);
     executionArn = await hotelApi.callExecuteApi();
   }
-  cookieOption.handler(searchKey, executionArn);
+  const option = {
+    path: "/",
+    maxAge: 60 * 60 * 24,
+  };
+  cookieOption.handler(searchKey, executionArn, option);
   hotelApi.setDescribePayload(executionArn);
 
   return await hotelApi.callDescribeApi();
